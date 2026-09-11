@@ -4,29 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Ortho Trauma Doc</title>
-<meta name="description" content="Griffin Rechter, MD — orthopaedic surgery resident heading into orthopaedic trauma. For injured patients, patients learning about a hip or femur fracture, residents, and practices looking to hire.">
+<meta name="description" content="Griffin Rechter, MD — senior orthopaedic surgery resident preparing for a career in orthopaedic trauma. Publications, presentations, research and contact.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   /* ---------- Tokens (Ortho Trauma Doc design system) ---------- */
   :root{
-    --clay-50:#FBEFEA;--clay-100:#F4D9CE;--clay-200:#E8B4A0;--clay-300:#D88C71;
-    --clay-400:#C46A4C;--clay-500:#A8452E;--clay-600:#8E3722;--clay-700:#702A19;--clay-800:#4F1D11;
+    --clay-50:#FBEFEA;--clay-100:#F4D9CE;--clay-400:#C46A4C;--clay-500:#A8452E;--clay-600:#8E3722;--clay-700:#702A19;
     --bone-50:#FDFBF7;--bone-100:#FBF7F1;--bone-200:#F4EDE3;--bone-300:#E9DFD1;--bone-400:#D9CBB8;--bone-500:#BFAE99;
     --espresso-300:#9B8A7C;--espresso-400:#7A6A5E;--espresso-500:#5A4C42;--espresso-600:#42362E;--espresso-700:#2E251F;--espresso-800:#1E1814;
     --amber-100:#FBEBCC;--amber-300:#EFC073;--amber-500:#D9932B;--amber-700:#9C6512;
     --olive-100:#E6EBD9;--olive-500:#5F7A4A;--olive-700:#42562F;
-    --rust-100:#F7DCD6;--rust-500:#A32A22;--rust-700:#761A14;
-    --slate-100:#DEE6E8;--slate-500:#4E6A7A;--slate-700:#33505E;
+    --slate-100:#DEE6E8;--slate-700:#33505E;
 
-    --surface-page:var(--bone-100);--surface-card:#FFFFFF;--surface-sunken:var(--bone-200);
-    --surface-inverse:var(--espresso-800);--surface-accent:var(--clay-500);--surface-accent-soft:var(--clay-50);
-    --text-heading:var(--espresso-800);--text-body:var(--espresso-600);--text-muted:var(--espresso-400);
-    --text-faint:var(--espresso-300);--text-inverse:var(--bone-100);--text-accent:var(--clay-500);
-    --text-link:var(--clay-600);--text-link-hover:var(--clay-700);
-    --border-hairline:var(--bone-300);--border-default:var(--bone-400);--border-strong:var(--espresso-300);
-    --focus-ring:var(--amber-500);
+    --surface-page:var(--bone-100);--surface-card:#FFFFFF;--surface-sunken:var(--bone-200);--surface-inverse:var(--espresso-800);
+    --text-heading:var(--espresso-800);--text-body:var(--espresso-600);--text-muted:var(--espresso-400);--text-faint:var(--espresso-300);
+    --text-inverse:var(--bone-100);--text-accent:var(--clay-500);--text-link:var(--clay-600);--text-link-hover:var(--clay-700);
+    --border-hairline:var(--bone-300);--border-default:var(--bone-400);--focus-ring:var(--amber-500);
 
     --font-serif:"Literata",Georgia,"Times New Roman",serif;
     --font-sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
@@ -38,32 +33,31 @@
     --shadow-md:0 2px 4px rgba(46,37,31,0.05),0 8px 20px rgba(46,37,31,0.08);
     --shadow-focus:0 0 0 3px rgba(217,147,43,0.45);
     --ease:cubic-bezier(0.2,0,0,1);
-    --container:1180px;--prose:720px;
-    --section-y:96px;--section-y-tight:64px;--gutter:24px;
+    --container:1080px;--prose:680px;--gutter:24px;--section-y:80px;
   }
   @media (min-width:900px){:root{--gutter:48px}}
-  @media (max-width:720px){:root{--section-y:64px;--section-y-tight:48px}}
+  @media (max-width:720px){:root{--section-y:52px}}
 
   /* ---------- Base ---------- */
   *,*::before,*::after{box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:76px}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition-duration:0ms!important}}
-  body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--font-sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  @media (prefers-reduced-motion:reduce){*{transition-duration:0ms!important}}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--font-sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+  main{flex:1}
   h1,h2,h3,h4{font-family:var(--font-serif);color:var(--text-heading);margin:0;font-weight:600;text-wrap:balance}
-  h1{font-size:clamp(36px,5.2vw,56px);line-height:1.04;letter-spacing:-0.02em}
-  h2{font-size:clamp(26px,3vw,34px);line-height:1.15;letter-spacing:-0.012em}
-  h3{font-size:20px;line-height:1.3;letter-spacing:-0.005em}
-  h4{font-size:17px;line-height:1.35}
+  h1{font-size:clamp(34px,4.6vw,52px);line-height:1.06;letter-spacing:-0.02em}
+  h2{font-size:clamp(24px,2.6vw,30px);line-height:1.18;letter-spacing:-0.012em}
+  h3{font-size:19px;line-height:1.3;letter-spacing:-0.005em}
   p{margin:0 0 16px;text-wrap:pretty}
   p:last-child{margin-bottom:0}
   a{color:var(--text-link);text-decoration-color:color-mix(in oklab,var(--text-link) 40%,transparent);text-underline-offset:2px;transition:color 140ms var(--ease),text-decoration-color 140ms var(--ease)}
   a:hover{color:var(--text-link-hover);text-decoration-color:currentColor}
   :focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
-  ul{margin:0;padding:0;list-style:none}
-  code,.mono{font-family:var(--font-mono);font-size:13px}
+  ul,ol{margin:0;padding:0;list-style:none}
+  .mono{font-family:var(--font-mono);font-size:13px}
   .container{max-width:var(--container);margin:0 auto;padding-inline:var(--gutter)}
   .eyebrow{font-size:12px;line-height:1.2;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;color:var(--text-accent);margin:0 0 14px}
-  .lead{font-size:19px;line-height:1.55;color:var(--text-body);max-width:48ch}
+  .lead{font-size:19px;line-height:1.55;max-width:52ch}
   .prose{max-width:var(--prose)}
   .muted{color:var(--text-muted)}
   .small{font-size:14px;line-height:1.5}
@@ -78,10 +72,6 @@
   .btn-primary:hover{background:var(--clay-600);color:var(--bone-50)}
   .btn-secondary{background:var(--surface-card);color:var(--text-heading);border-color:var(--border-default);box-shadow:var(--shadow-xs)}
   .btn-secondary:hover{background:var(--bone-200);color:var(--text-heading)}
-  .btn-inverse{background:transparent;color:var(--text-inverse);border-color:rgba(251,247,241,0.35)}
-  .btn-inverse:hover{background:rgba(251,247,241,0.08);color:var(--text-inverse)}
-  .btn-ghost{background:transparent;color:var(--text-link);padding-inline:10px}
-  .btn-ghost:hover{background:var(--bone-200)}
 
   /* ---------- Header ---------- */
   .site-header{position:sticky;top:0;z-index:40;background:rgba(251,247,241,0.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--border-hairline)}
@@ -90,716 +80,304 @@
   .wordmark .mark{display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--clay-500);transform:translateY(-1px)}
   .wordmark:hover{color:var(--text-heading)}
   .nav{display:flex;align-items:center;gap:4px}
-  .nav a{font-size:14.5px;font-weight:500;color:var(--text-body);text-decoration:none;padding:8px 11px;border-radius:var(--radius-sm);transition:background-color 140ms var(--ease),color 140ms var(--ease)}
+  .nav a{font-size:14.5px;font-weight:500;color:var(--text-body);text-decoration:none;padding:8px 12px;border-radius:var(--radius-sm);transition:background-color 140ms var(--ease),color 140ms var(--ease)}
   .nav a:hover{background:var(--bone-200);color:var(--text-heading)}
-  .nav a.is-active{color:var(--clay-600);background:var(--clay-50)}
-  .nav .btn{margin-left:8px}
-  .nav-toggle{display:none;font:inherit;background:transparent;border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:8px 10px;color:var(--text-heading);cursor:pointer;align-items:center;gap:8px;font-size:14px}
-  .nav-toggle svg{width:16px;height:16px}
-  @media (max-width:960px){
-    .nav-toggle{display:inline-flex}
-    .nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--bone-50);border-bottom:1px solid var(--border-hairline);flex-direction:column;align-items:stretch;padding:12px var(--gutter) 20px;gap:2px;box-shadow:var(--shadow-md)}
-    .nav.is-open{display:flex}
-    .nav a{padding:12px 10px;font-size:16px}
-    .nav .btn{margin:10px 0 0;justify-content:center}
+  .nav a[aria-current="page"]{color:var(--clay-600);background:var(--clay-50)}
+  .nav .btn{margin-left:10px;padding:10px 14px;font-size:14px}
+  .nav a.btn-primary{color:var(--bone-50)}
+  .nav a.btn-primary:hover{background:var(--clay-600);color:var(--bone-50)}
+  @media (max-width:640px){
+    .site-header .container{gap:12px}
+    .wordmark{font-size:16px;gap:7px}
+    .nav{gap:0}
+    .nav a{padding:8px 8px;font-size:14px}
+    .nav .btn{display:none}
   }
 
-  /* ---------- Sections ---------- */
+  /* ---------- Pages ---------- */
+  .page[hidden]{display:none}
   .section{padding-block:var(--section-y)}
-  .section-tight{padding-block:var(--section-y-tight)}
   .band-sunken{background:var(--surface-sunken);border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline)}
-  .band-inverse{background:var(--surface-inverse);color:var(--bone-300)}
-  .band-inverse h2,.band-inverse h3,.band-inverse h4{color:var(--bone-50)}
-  .band-inverse .eyebrow{color:var(--amber-300)}
-  .band-inverse .muted{color:var(--espresso-300)}
-  .band-inverse a{color:var(--amber-300);text-decoration-color:rgba(239,192,115,0.4)}
-  .band-inverse a:hover{color:var(--amber-100)}
-  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:48px;flex-wrap:wrap}
-  .section-head .lead{margin-top:14px}
-  .section-head .eyebrow{margin-bottom:12px}
-  hr.rule{border:0;border-top:1px solid var(--border-hairline);margin:0}
+  .section-head{margin-bottom:36px}
+  .section-head .lead{margin-top:12px}
+  .split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px;align-items:start}
+  @media (max-width:860px){.split{grid-template-columns:1fr;gap:32px}}
+  .sticky{position:sticky;top:92px}
+  @media (max-width:860px){.sticky{position:static}}
 
-  /* ---------- Hero ---------- */
-  .hero{padding-block:72px 64px}
-  @media (max-width:720px){.hero{padding-block:44px 40px}}
-  .hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:end}
-  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}}
-  .hero h1{max-width:16ch}
-  .hero .lead{margin-top:24px}
-  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-  .hero-meta{display:grid;gap:14px;font-size:14px;line-height:1.5;color:var(--text-body)}
-  .hero-meta div{padding-top:12px;border-top:1px solid var(--border-hairline)}
-  .hero-meta b{display:block;font-weight:600;color:var(--text-heading);font-size:14px}
-  .hero-meta .mono{color:var(--text-muted)}
-  .badge{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;padding:4px 10px;border-radius:var(--radius-pill);border:1px solid var(--border-hairline);background:var(--surface-card);color:var(--text-body);line-height:1.3}
-  .badge-accent{background:var(--clay-50);border-color:var(--clay-100);color:var(--clay-700)}
-  .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--olive-500)}
-
-  /* ---------- Router ---------- */
-  .router{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
-  @media (max-width:1000px){.router{grid-template-columns:repeat(2,minmax(0,1fr))}}
-  @media (max-width:560px){.router{grid-template-columns:1fr}}
-  .route{display:flex;flex-direction:column;gap:10px;background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-sm);text-decoration:none;color:var(--text-body);transition:box-shadow 220ms var(--ease),border-color 220ms var(--ease)}
-  .route:hover{box-shadow:var(--shadow-md);border-color:var(--border-default);color:var(--text-body)}
-  .route .eyebrow{margin:0}
-  .route h3{font-size:20px}
-  .route p{font-size:14.5px;line-height:1.5;color:var(--text-muted);flex:1}
-  .route .go{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--text-link)}
-  .route .go svg{width:15px;height:15px;transition:transform 140ms var(--ease)}
-  .route:hover .go svg{transform:translateX(3px)}
-
-  /* ---------- Cards & grids ---------- */
+  /* ---------- About ---------- */
+  .hero{padding-block:64px 56px}
+  @media (max-width:720px){.hero{padding-block:40px 36px}}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:56px;align-items:end}
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:32px}}
+  .hero h1{max-width:18ch}
+  .hero .lead{margin-top:22px}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+  .portrait{background:var(--bone-300);border-radius:var(--radius-xl);aspect-ratio:4/5;display:flex;align-items:flex-end;padding:16px;font-family:var(--font-mono);font-size:12.5px;color:var(--espresso-500);max-width:360px;width:100%;justify-self:end}
+  @media (max-width:860px){.portrait{justify-self:start;max-width:280px}}
+  .facts{display:grid;gap:0;margin-top:8px}
+  .facts div{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--border-hairline);font-size:14.5px;line-height:1.5}
+  .facts div:last-child{border-bottom:1px solid var(--border-hairline)}
+  .facts dt{color:var(--text-muted);margin:0}
+  .facts dd{margin:0;color:var(--text-heading)}
+  @media (max-width:560px){.facts div{grid-template-columns:1fr;gap:2px}}
+  .timeline li{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--border-hairline)}
+  .timeline li:last-child{border-bottom:1px solid var(--border-hairline)}
+  .timeline .when{font-family:var(--font-mono);font-size:13px;color:var(--text-muted);padding-top:4px}
+  .timeline b{display:block;font-weight:600;color:var(--text-heading);font-size:16px}
+  .timeline span{font-size:14.5px;color:var(--text-muted)}
+  @media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:4px}}
   .card{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-sm)}
-  .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  .card h3{margin-bottom:12px}
+  .card ul li{padding:9px 0;border-top:1px solid var(--border-hairline);font-size:14.5px;line-height:1.5}
+  .card ul li:first-child{border-top:0;padding-top:0}
+  .card ul li:last-child{padding-bottom:0}
+  .card ul li .when{display:block;font-family:var(--font-mono);font-size:12.5px;color:var(--text-muted);margin-top:2px}
   .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-  @media (max-width:900px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
-  .split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
-  @media (max-width:900px){.split{grid-template-columns:1fr;gap:36px}}
-  .sticky-col{position:sticky;top:96px}
-  @media (max-width:900px){.sticky-col{position:static}}
+  @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+  .stack{display:grid;gap:24px}
+  .pull{max-width:46ch;font-family:var(--font-serif);font-size:clamp(20px,2.3vw,25px);line-height:1.35;font-weight:400;color:var(--text-heading)}
+  .pull::before{content:"";display:block;width:32px;height:2px;background:var(--clay-500);margin-bottom:18px}
 
-  /* ---------- Steps (patients) ---------- */
-  .steps{counter-reset:step;display:grid;gap:0}
-  .step{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--border-hairline)}
-  .step:last-child{border-bottom:1px solid var(--border-hairline)}
-  .step .num{font-family:var(--font-mono);font-size:13px;color:var(--text-muted);padding-top:6px}
-  .step h3{margin-bottom:8px}
-  .step p{color:var(--text-body)}
-  @media (max-width:560px){.step{grid-template-columns:1fr;gap:6px}}
+  /* ---------- Research ---------- */
+  .stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;margin-bottom:56px}
+  @media (max-width:960px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @media (max-width:560px){.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
+  .stat{border-top:2px solid var(--clay-500);padding-top:14px}
+  .stat .n{font-family:var(--font-serif);font-size:clamp(32px,3.6vw,44px);line-height:1;font-weight:600;color:var(--text-heading);letter-spacing:-0.02em;font-variant-numeric:tabular-nums}
+  .stat .l{font-size:13.5px;color:var(--text-muted);margin-top:8px;line-height:1.4}
+  .themes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  @media (max-width:860px){.themes{grid-template-columns:1fr}}
+  .theme h3{font-size:18px;margin-bottom:8px}
+  .theme p{font-size:14.5px;color:var(--text-body)}
+  .theme .mono{color:var(--text-faint);display:block;margin-bottom:10px}
 
-  /* ---------- Callouts ---------- */
-  .callout{border-radius:var(--radius-md);padding:16px 18px 16px;font-size:15px;line-height:1.55;color:var(--text-body)}
-  .callout .label{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
-  .callout .label::before{content:"";width:32px;height:2px;background:currentColor;border-radius:1px}
-  .callout-pearl{background:var(--olive-100)} .callout-pearl .label{color:var(--olive-700)}
-  .callout-pitfall{background:var(--rust-100)} .callout-pitfall .label{color:var(--rust-700)}
-  .callout-evidence{background:var(--slate-100)} .callout-evidence .label{color:var(--slate-700)}
-  .callout-note{background:var(--bone-200)} .callout-note .label{color:var(--espresso-500)}
-  .callout-warning{background:var(--amber-100)} .callout-warning .label{color:var(--amber-700)}
-
-  /* ---------- Injury tabs ---------- */
-  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--border-hairline);overflow-x:auto;scrollbar-width:none;margin-bottom:36px}
+  .toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:24px}
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--border-hairline);overflow-x:auto;scrollbar-width:none;margin-bottom:24px}
   .tabs::-webkit-scrollbar{display:none}
   .tab{font:inherit;font-size:15px;font-weight:500;color:var(--text-muted);background:transparent;border:0;border-bottom:2px solid transparent;padding:12px 14px;margin-bottom:-1px;cursor:pointer;white-space:nowrap;transition:color 140ms var(--ease),border-color 140ms var(--ease)}
   .tab:hover{color:var(--text-heading)}
   .tab[aria-selected="true"]{color:var(--clay-600);border-bottom-color:var(--clay-500)}
-  .tab .mono{color:var(--text-faint);margin-left:8px}
-  .tab[aria-selected="true"] .mono{color:var(--clay-400)}
-  .panel[hidden]{display:none}
-  .injury{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:start}
-  @media (max-width:900px){.injury{grid-template-columns:1fr;gap:32px}}
-  .injury h3{font-size:26px;letter-spacing:-0.01em;margin-bottom:6px}
-  .injury .codes{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 24px}
-  .injury h4{margin:24px 0 8px;font-family:var(--font-sans);font-size:15px;font-weight:600;color:var(--text-heading)}
-  .injury h4:first-of-type{margin-top:0}
-  .injury p{color:var(--text-body)}
-  .aside-stack{display:grid;gap:16px}
-  .facts{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-lg);padding:20px 24px;box-shadow:var(--shadow-sm)}
-  .facts dl{margin:0;display:grid;gap:0}
-  .facts .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:16px;padding:10px 0;border-top:1px solid var(--border-hairline);font-size:14px;line-height:1.5}
-  .facts .row:first-child{border-top:0;padding-top:0}
-  .facts .row:last-child{padding-bottom:0}
-  .facts dt{color:var(--text-muted);margin:0}
-  .facts dd{margin:0;color:var(--text-heading);font-weight:500}
-  .facts dd .mono{font-weight:400;color:var(--text-muted)}
-  .questions li{padding:10px 0;border-top:1px solid var(--border-hairline);font-size:15px;line-height:1.5}
-  .questions li:first-child{border-top:0;padding-top:0}
-  .questions li:last-child{padding-bottom:0}
-  .placeholder{background:var(--bone-300);border-radius:var(--radius-md);aspect-ratio:4/3;display:flex;align-items:flex-end;padding:12px 14px;font-family:var(--font-mono);font-size:12.5px;color:var(--espresso-500);max-width:100%}
-
-  /* ---------- About ---------- */
-  .portrait{background:var(--bone-300);border-radius:var(--radius-xl);aspect-ratio:4/5;display:flex;align-items:flex-end;padding:16px;font-family:var(--font-mono);font-size:12.5px;color:var(--espresso-500);max-width:100%}
-  .cred{display:grid;gap:0;margin-top:32px}
-  .cred div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--border-hairline);font-size:14.5px;line-height:1.5}
-  .cred div:last-child{border-bottom:1px solid var(--border-hairline)}
-  .cred dt{color:var(--text-muted);margin:0}
-  .cred dd{margin:0;color:var(--text-heading)}
-  @media (max-width:560px){.cred div{grid-template-columns:1fr;gap:2px}}
-  .research li{padding:16px 0;border-top:1px solid var(--border-hairline);display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start}
-  .research li:last-child{border-bottom:1px solid var(--border-hairline)}
-  .research b{display:block;font-weight:600;color:var(--text-heading);font-size:16px;margin-bottom:2px}
-  .research span{font-size:14.5px;color:var(--text-muted)}
-  @media (max-width:560px){.research li{grid-template-columns:1fr}}
-
-  /* ---------- Residents ---------- */
-  .pull{max-width:48ch;font-family:var(--font-serif);font-size:clamp(21px,2.4vw,26px);line-height:1.35;font-weight:400;color:var(--text-heading);letter-spacing:-0.005em}
-  .pull::before{content:"";display:block;width:32px;height:2px;background:var(--clay-500);margin-bottom:18px}
-  .pull-attr{margin-top:16px;font-size:14px;color:var(--text-muted)}
-  .framework{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);overflow:hidden}
-  .framework-head{padding:20px 24px;border-bottom:1px solid var(--border-hairline);display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap}
-  .framework-head h3{font-size:19px}
-  .framework ol{margin:0;padding:0;list-style:none;counter-reset:fw}
-  .framework li{counter-increment:fw;display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 24px;border-top:1px solid var(--border-hairline);font-size:15px;line-height:1.55}
-  .framework li:first-child{border-top:0}
-  .framework li::before{content:counter(fw,decimal-leading-zero);font-family:var(--font-mono);font-size:13px;color:var(--clay-500);padding-top:3px}
-  .framework li b{font-weight:600;color:var(--text-heading)}
-  .band-inverse .framework{color:var(--text-body)}
-  .band-inverse .framework h3{color:var(--text-heading)}
-  .band-inverse .framework .muted{color:var(--text-muted)}
-  .band-inverse .pull{color:var(--bone-50)}
-  .band-inverse .pull::before{background:var(--amber-500)}
-  .band-inverse .callout{background:var(--espresso-700);color:var(--bone-200)}
-  .band-inverse .callout-pearl .label{color:#B9C99A}
-  .band-inverse .callout-pitfall .label{color:#E8A79A}
-  .band-inverse .callout-evidence .label{color:#A9C0CB}
-
-  /* ---------- Work with me ---------- */
-  .offer{display:grid;gap:8px}
-  .offer h3{font-size:19px}
-  .offer p{font-size:15px;color:var(--text-body)}
-  .cta-panel{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-xl);padding:40px;box-shadow:var(--shadow-sm);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center}
-  @media (max-width:800px){.cta-panel{grid-template-columns:1fr;padding:28px}}
-  .cta-panel h3{font-size:24px;letter-spacing:-0.01em}
-  .cta-panel .actions{display:flex;gap:12px;flex-wrap:wrap}
+  .tab .count{font-family:var(--font-mono);font-size:12.5px;color:var(--text-faint);margin-left:7px}
+  .tab[aria-selected="true"] .count{color:var(--clay-400)}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .chip{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;font-weight:500;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid var(--border-default);background:var(--surface-card);color:var(--text-body);cursor:pointer;transition:background-color 140ms var(--ease),border-color 140ms var(--ease),color 140ms var(--ease)}
+  .chip:hover{background:var(--bone-200)}
+  .chip[aria-pressed="true"]{background:var(--clay-500);border-color:var(--clay-500);color:var(--bone-50)}
+  .search{position:relative;flex:1;min-width:220px;max-width:360px}
+  .search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text-faint);pointer-events:none}
+  .search input{width:100%;font:inherit;font-size:14.5px;padding:10px 12px 10px 36px;border-radius:var(--radius-sm);border:1px solid var(--border-default);background:var(--surface-card);color:var(--text-heading);transition:border-color 140ms var(--ease),box-shadow 140ms var(--ease)}
+  .search input::placeholder{color:var(--text-faint)}
+  .search input:focus{outline:0;border-color:var(--clay-500);box-shadow:var(--shadow-focus)}
+  .pubs{border-top:1px solid var(--border-hairline)}
+  .pub{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--border-hairline)}
+  @media (max-width:560px){.pub{grid-template-columns:1fr;gap:6px}}
+  .pub .year{font-family:var(--font-mono);font-size:13px;color:var(--text-muted);padding-top:4px}
+  .pub .title{font-family:var(--font-serif);font-weight:600;font-size:17px;line-height:1.35;color:var(--text-heading);letter-spacing:-0.005em}
+  .pub .authors{font-size:14px;line-height:1.5;color:var(--text-muted);margin-top:6px}
+  .pub .authors b{font-weight:600;color:var(--text-body)}
+  .pub .venue{font-size:14px;color:var(--text-body);margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .pub .venue i{font-style:italic}
+  .badge{display:inline-flex;align-items:center;font-size:12px;font-weight:500;padding:3px 9px;border-radius:var(--radius-pill);border:1px solid var(--border-hairline);background:var(--surface-card);color:var(--text-muted);line-height:1.3}
+  .badge-accent{background:var(--clay-50);border-color:var(--clay-100);color:var(--clay-700)}
+  .badge-olive{background:var(--olive-100);border-color:transparent;color:var(--olive-700)}
+  .badge-amber{background:var(--amber-100);border-color:transparent;color:var(--amber-700)}
+  .empty{padding:40px 0;color:var(--text-muted);text-align:center}
+  .list-note{margin-top:20px;font-size:13.5px;color:var(--text-muted)}
 
   /* ---------- Contact ---------- */
-  .contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-  @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
-  .contact-card h3{font-size:18px;margin-bottom:8px}
-  .contact-card p{font-size:14.5px;color:var(--text-muted);margin-bottom:14px}
-  .contact-card a.email{font-family:var(--font-mono);font-size:14px}
+  .contact-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:start}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:32px}}
+  .contact-email{font-family:var(--font-serif);font-size:clamp(22px,2.8vw,30px);font-weight:600;letter-spacing:-0.01em;color:var(--text-heading);text-decoration:none;display:inline-block;margin:8px 0 6px;overflow-wrap:anywhere}
+  .contact-email:hover{color:var(--clay-600)}
+  .ways li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--border-hairline);font-size:15px;line-height:1.5}
+  .ways li:last-child{border-bottom:1px solid var(--border-hairline)}
+  .ways .k{color:var(--text-muted)}
+  @media (max-width:560px){.ways li{grid-template-columns:1fr;gap:2px}}
 
   /* ---------- Footer ---------- */
-  .site-footer{border-top:1px solid var(--border-hairline);padding-block:40px 48px;font-size:13.5px;line-height:1.55;color:var(--text-muted)}
-  .site-footer .container{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px}
-  @media (max-width:800px){.site-footer .container{grid-template-columns:1fr;gap:24px}}
-  .site-footer .wordmark{font-size:17px;margin-bottom:12px}
-  .site-footer ul{display:grid;gap:6px}
+  .site-footer{border-top:1px solid var(--border-hairline);padding-block:32px 40px;font-size:13.5px;line-height:1.55;color:var(--text-muted)}
+  .site-footer .container{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline}
+  .site-footer .wordmark{font-size:16px}
   .site-footer a{color:var(--text-body)}
-  .footnote{margin-top:24px;padding-top:16px;border-top:1px solid var(--border-hairline);grid-column:1 / -1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="container">
-    <a class="wordmark" href="#top" aria-label="The Ortho Trauma Doc — home"><span class="mark" aria-hidden="true"></span>The Ortho Trauma Doc</a>
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      Menu
-    </button>
-    <nav class="nav" id="site-nav" aria-label="Site">
-      <a href="#patients">Patients</a>
-      <a href="#injuries">Your injury</a>
-      <a href="#about">About</a>
-      <a href="#residents">Residents</a>
-      <a href="#work">Work with me</a>
-      <a class="btn btn-primary" href="#contact">Send an email</a>
+    <a class="wordmark" href="#about" aria-label="The Ortho Trauma Doc — home"><span class="mark" aria-hidden="true"></span>The Ortho Trauma Doc</a>
+    <nav class="nav" aria-label="Site">
+      <a href="#about" data-page="about">About</a>
+      <a href="#research" data-page="research">Research</a>
+      <a href="#contact" data-page="contact">Contact</a>
+      <a class="btn btn-primary" href="Griffin-Rechter-CV.pdf" download>CV</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div>
-          <p class="eyebrow">Griffin Rechter, MD · Orthopaedic surgery</p>
-          <h1>Broken bones, fixed properly, explained plainly.</h1>
-          <p class="lead">I'm an orthopaedic surgery resident heading into orthopaedic trauma — the fractures that arrive by ambulance, the ones that need an operation, and the months of recovery after. This site is for the people I take care of, the residents I teach, and the practices I'd like to work with.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#injuries">Understand your injury</a>
-            <a class="btn btn-secondary" href="#about">Read about me</a>
-          </div>
-        </div>
-        <div class="hero-meta" aria-label="At a glance">
-          <div><b>Training</b>PGY-4 orthopaedic surgery resident, Orlando Health Jewett Orthopaedic Institute</div>
-          <div><b>Direction</b>Orthopaedic trauma fellowship — pelvis, acetabulum, hip and long-bone fractures, periarticular injuries</div>
-          <div><b>Medical school</b>TCU School of Medicine, inaugural graduating class</div>
-          <div><b>Research</b>Femoral neck fracture outcomes, interprosthetic femur fractures, revision ACL reconstruction (MARS Group)</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ROUTER ================= -->
-  <section class="section-tight band-sunken" aria-labelledby="router-title">
-    <div class="container">
-      <h2 id="router-title" class="visually-hidden">Choose your path</h2>
-      <div class="router">
-        <a class="route" href="#patients">
-          <p class="eyebrow">I'm injured</p>
-          <h3>What to do right now</h3>
-          <p>When to go to the emergency department, what to bring, and what the first 72 hours of a fracture usually look like.</p>
-          <span class="go">Start here <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a class="route" href="#injuries">
-          <p class="eyebrow">I'm a patient</p>
-          <h3>Understand your injury</h3>
-          <p>Hip and femur fractures in plain language: what broke, how it's usually fixed, and what recovery asks of you.</p>
-          <span class="go">Read the injury guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a class="route" href="#residents">
-          <p class="eyebrow">I'm a resident</p>
-          <h3>How I think through a fracture</h3>
-          <p>Mechanism-first reasoning, the pitfalls I teach on every rotation, and the reading that changed my practice.</p>
-          <span class="go">See the teaching <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a class="route" href="#work">
-          <p class="eyebrow">I'm hiring</p>
-          <h3>Work with me</h3>
-          <p>Fellowship-bound trauma surgeon with an academic habit. What I bring to a practice, a department or a new residency program.</p>
-          <span class="go">See what I offer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PATIENTS ================= -->
-  <section class="section" id="patients" aria-labelledby="patients-title">
-    <div class="container">
-      <div class="split">
-        <div class="sticky-col">
-          <p class="eyebrow">For injured patients</p>
-          <h2 id="patients-title">If you think something is broken, here is what happens next.</h2>
-          <p class="lead" style="margin-top:20px">Most fractures are not emergencies measured in minutes — but a few are. The steps on the right are the ones I'd want my own family to follow.</p>
-          <div class="callout callout-warning" style="margin-top:28px">
-            <div class="label">Call 911 now if</div>
-            The limb is cold, pale or numb below the injury · bone is visible through the skin · the injury followed a fall from height, a car or motorcycle crash, or a pedestrian strike · there is a head injury, chest pain or trouble breathing alongside the fracture.
-          </div>
-        </div>
-        <div>
-          <ol class="steps">
-            <li class="step">
-              <span class="num">01</span>
-              <div>
-                <h3>Don't test it. Splint it and stop moving.</h3>
-                <p>If a limb is deformed, won't bear weight, or a joint won't move, assume it's fractured until an X-ray says otherwise. Keep it still with whatever is at hand — a rolled magazine, a pillow, a folded towel — and elevate it above the heart if you can.</p>
-              </div>
-            </li>
-            <li class="step">
-              <span class="num">02</span>
-              <div>
-                <h3>Get to an emergency department, not an urgent care.</h3>
-                <p>Hip, pelvis, femur and open fractures need a hospital with orthopaedic surgery on call. Urgent care can X-ray a wrist; it cannot admit you or take you to the operating room. If you cannot put weight through the leg, use an ambulance.</p>
-              </div>
-            </li>
-            <li class="step">
-              <span class="num">03</span>
-              <div>
-                <h3>Bring three things: your medication list, your last meal time, and your questions.</h3>
-                <p>Blood thinners (warfarin, apixaban, rivaroxaban, clopidogrel) change the timing of surgery. Anaesthesia needs to know when you last ate or drank — for most fractures needing an operation, that clock starts now, so stop eating once you suspect a break.</p>
-              </div>
-            </li>
-            <li class="step">
-              <span class="num">04</span>
-              <div>
-                <h3>Expect imaging, a splint or traction, and a plan within the first day.</h3>
-                <p>X-rays first, a CT scan if the fracture involves a joint or the pelvis. Most hip fractures are operated on within 24 to 48 hours of admission because earlier surgery means earlier standing and fewer complications. The surgeon should be able to tell you what broke, how it will be fixed, and when you'll be allowed to bear weight.</p>
-              </div>
-            </li>
-            <li class="step">
-              <span class="num">05</span>
-              <div>
-                <h3>Recovery is measured in weeks, and you are the most important part of it.</h3>
-                <p>Bone heals on a schedule — roughly 6 weeks for the first solid bridge, 3 to 6 months to full strength for a femur. Physical therapy, nutrition (protein and vitamin D), not smoking, and showing up to every follow-up X-ray move that timeline more than anything I do in the operating room.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= INJURIES ================= -->
-  <section class="section band-sunken" id="injuries" aria-labelledby="injuries-title">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Understand your injury · Hip and femur</p>
-          <h2 id="injuries-title">The fractures I treat most, in plain language.</h2>
-          <p class="lead">The femur is the longest bone in the body and it breaks in four characteristic places. Pick the one on your X-ray report. Each guide describes what usually happens — your surgeon's plan for you is the one that counts.</p>
-        </div>
-      </div>
-
-      <div class="tabs" role="tablist" aria-label="Fracture type">
-        <button class="tab" role="tab" id="tab-neck" aria-selected="true" aria-controls="panel-neck">Femoral neck <span class="mono">31-B</span></button>
-        <button class="tab" role="tab" id="tab-it" aria-selected="false" aria-controls="panel-it" tabindex="-1">Intertrochanteric <span class="mono">31-A</span></button>
-        <button class="tab" role="tab" id="tab-shaft" aria-selected="false" aria-controls="panel-shaft" tabindex="-1">Femoral shaft <span class="mono">32</span></button>
-        <button class="tab" role="tab" id="tab-distal" aria-selected="false" aria-controls="panel-distal" tabindex="-1">Distal femur <span class="mono">33</span></button>
-        <button class="tab" role="tab" id="tab-peri" aria-selected="false" aria-controls="panel-peri" tabindex="-1">Around a hip or knee replacement</button>
-      </div>
-
-      <!-- Femoral neck -->
-      <div class="panel" id="panel-neck" role="tabpanel" aria-labelledby="tab-neck">
-        <div class="injury">
-          <div>
-            <h3>Femoral neck fracture</h3>
-            <p class="muted">A break in the narrow bridge of bone just below the ball of the hip joint, inside the joint capsule.</p>
-            <div class="codes"><span class="badge badge-accent">AO/OTA 31-B</span><span class="badge">Garden I–IV</span><span class="badge">Pauwels I–III</span></div>
-
-            <h4>What broke</h4>
-            <p>The femoral head (the ball) sits on a short neck of bone. The blood supply to the head runs up along that neck, so when the neck breaks and shifts, the head can lose its blood supply. That single fact drives almost every decision about this fracture. In older adults it usually follows a fall from standing height; in younger adults it takes a much higher-energy injury.</p>
-
-            <h4>How it is usually fixed</h4>
-            <p>If the fracture has not moved (Garden I or II), the neck can often be held with screws or a small sliding plate while it heals in place. If it has displaced (Garden III or IV) in an older patient, replacing the ball — a hemiarthroplasty — or the whole joint — a total hip arthroplasty — is usually more reliable than trying to make the bone heal, because it lets you stand on the leg the next day and removes the risk of the head dying later. In a younger patient the priority flips: an urgent, anatomic reduction and fixation to try to save the native hip.</p>
-
-            <h4>Recovery</h4>
-            <p>After a replacement you will typically walk with full weight-bearing on day one and be home or in rehab within 2 to 4 days. After screw fixation, weight-bearing is often restricted for 6 to 12 weeks while the neck heals, with X-rays at 2, 6 and 12 weeks and again at a year to check the head is alive. The most important thing you can do in the first month is get up and move — pneumonia, blood clots and pressure sores are the enemies of a hip fracture, not the incision.</p>
-
-            <div class="callout callout-note" style="margin-top:24px">
-              <div class="label">Note</div>
-              Whether a displaced femoral neck fracture does better with fixation or a replacement is the subject of my own research. The honest answer is that it depends on your age, your activity level, your bone quality and how far the fracture has moved — bring those four things up with your surgeon.
-            </div>
-          </div>
-          <div class="aside-stack">
-            <div class="placeholder" aria-hidden="true">AP pelvis radiograph · placeholder</div>
-            <div class="facts">
-              <dl>
-                <div class="row"><dt>Typical patient</dt><dd>Over 65, fall from standing</dd></div>
-                <div class="row"><dt>Timing of surgery</dt><dd>Within 24–48 h of admission</dd></div>
-                <div class="row"><dt>Operations</dt><dd>Screws or sliding hip screw · hemiarthroplasty · total hip</dd></div>
-                <div class="row"><dt>Hospital stay</dt><dd>2–5 days</dd></div>
-                <div class="row"><dt>Weight-bearing</dt><dd>Immediate after replacement <span class="mono">· 6–12 wk restricted after fixation</span></dd></div>
-                <div class="row"><dt>Back to baseline</dt><dd>3–6 months</dd></div>
-              </dl>
-            </div>
-            <div class="card">
-              <h4 style="margin:0 0 12px">Questions to ask your surgeon</h4>
-              <ul class="questions">
-                <li>Is my fracture displaced, and does that change fixation versus replacement?</li>
-                <li>If you fix it, what is the chance I'll need a second operation?</li>
-                <li>How much weight can I put through the leg, and from what day?</li>
-                <li>What is the plan for my bone density after this?</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Intertrochanteric -->
-      <div class="panel" id="panel-it" role="tabpanel" aria-labelledby="tab-it" hidden>
-        <div class="injury">
-          <div>
-            <h3>Intertrochanteric hip fracture</h3>
-            <p class="muted">A break through the broad part of the upper femur, between the two bony prominences below the neck, outside the joint capsule.</p>
-            <div class="codes"><span class="badge badge-accent">AO/OTA 31-A</span><span class="badge">Stable vs. unstable</span><span class="badge">Reverse obliquity</span></div>
-
-            <h4>What broke</h4>
-            <p>This is the most common hip fracture in older adults. Because it sits outside the joint capsule the blood supply to the femoral head is preserved, so the bone heals well — the challenge is holding it in position while it does. The fracture is called "stable" when the inner cortex of bone still lines up and "unstable" when the back-inner wall is broken into pieces or the fracture line runs the wrong way (reverse obliquity).</p>
-
-            <h4>How it is usually fixed</h4>
-            <p>Almost all of these are fixed, not replaced. A stable pattern can be held with a sliding hip screw and short plate. An unstable pattern is usually held with a cephalomedullary nail — a rod placed down the inside of the femur with a large screw passing up into the femoral head. The nail lets you put full weight through the leg immediately, which for an older patient is the whole point.</p>
-
-            <h4>Recovery</h4>
-            <p>Standing with the physical therapist on day one, walking with a walker within the first few days, and 6 to 12 weeks until the fracture is solid on X-ray. Most people recover most of their walking ability, but roughly a third need a walking aid they didn't need before. Bone-strengthening medication after a hip fracture roughly halves the chance of a second one — ask about it before you leave the hospital.</p>
-          </div>
-          <div class="aside-stack">
-            <div class="placeholder" aria-hidden="true">AP hip radiograph · placeholder</div>
-            <div class="facts">
-              <dl>
-                <div class="row"><dt>Typical patient</dt><dd>Over 70, low-energy fall</dd></div>
-                <div class="row"><dt>Timing of surgery</dt><dd>Within 24–48 h of admission</dd></div>
-                <div class="row"><dt>Operations</dt><dd>Sliding hip screw · cephalomedullary nail</dd></div>
-                <div class="row"><dt>Hospital stay</dt><dd>3–6 days, often to rehab</dd></div>
-                <div class="row"><dt>Weight-bearing</dt><dd>Immediate, as tolerated</dd></div>
-                <div class="row"><dt>Bone healed</dt><dd>6–12 weeks</dd></div>
-              </dl>
-            </div>
-            <div class="card">
-              <h4 style="margin:0 0 12px">Questions to ask your surgeon</h4>
-              <ul class="questions">
-                <li>Is my pattern stable or unstable, and does that change the implant?</li>
-                <li>Will I go home or to a rehabilitation facility, and who decides?</li>
-                <li>Who is managing my bone health and blood-thinner plan after discharge?</li>
-                <li>What symptoms should make me call before my scheduled follow-up?</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Femoral shaft -->
-      <div class="panel" id="panel-shaft" role="tabpanel" aria-labelledby="tab-shaft" hidden>
-        <div class="injury">
-          <div>
-            <h3>Femoral shaft fracture</h3>
-            <p class="muted">A break through the long, tubular middle of the thigh bone.</p>
-            <div class="codes"><span class="badge badge-accent">AO/OTA 32</span><span class="badge">Winquist 0–IV</span><span class="badge">Open · Gustilo I–III</span></div>
-
-            <h4>What broke</h4>
-            <p>The shaft of the femur is the strongest bone in the body, so breaking it takes real force — a car or motorcycle crash, a fall from height, a sporting collision — and it is often not the only injury. The thigh can hold more than a litre of blood, and a shaft fracture is treated as a whole-body injury first: airway, breathing, circulation, then the femur.</p>
-
-            <h4>How it is usually fixed</h4>
-            <p>The standard operation is an intramedullary nail: a titanium rod passed down the hollow centre of the bone, locked with screws at each end, through incisions a few centimetres long. It is usually done within 24 hours once you are stable. If the skin is broken (an open fracture), you'll get antibiotics within the first hour and a washout in the operating room before or during the nailing.</p>
-
-            <h4>Recovery</h4>
-            <p>A nailed femur is strong enough to bear weight early — often immediately, sometimes with a walker for the first weeks. Expect 3 to 4 months to a healed X-ray and 6 to 12 months to full strength and sport. A femur is a big bone to heal; protein, not smoking, and your physical therapy schedule are the levers you control.</p>
-
-            <div class="callout callout-pitfall" style="margin-top:24px">
-              <div class="label">Pitfall</div>
-              Roughly 1 in 20 femoral shaft fractures has a second, hidden fracture in the femoral neck of the same leg. It is easy to miss on the first X-ray and much harder to treat once it has displaced. Every shaft fracture I treat gets dedicated hip imaging before, during and after the nail — ask your team to confirm the neck has been checked.
-            </div>
-          </div>
-          <div class="aside-stack">
-            <div class="placeholder" aria-hidden="true">AP/lateral femur radiograph · placeholder</div>
-            <div class="facts">
-              <dl>
-                <div class="row"><dt>Typical patient</dt><dd>Younger adult, high-energy injury</dd></div>
-                <div class="row"><dt>Timing of surgery</dt><dd>Within 24 h once stable</dd></div>
-                <div class="row"><dt>Operation</dt><dd>Intramedullary nail, antegrade or retrograde</dd></div>
-                <div class="row"><dt>Hospital stay</dt><dd>2–5 days, longer with other injuries</dd></div>
-                <div class="row"><dt>Weight-bearing</dt><dd>Early, often immediate</dd></div>
-                <div class="row"><dt>Return to sport</dt><dd>6–12 months</dd></div>
-              </dl>
-            </div>
-            <div class="card">
-              <h4 style="margin:0 0 12px">Questions to ask your surgeon</h4>
-              <ul class="questions">
-                <li>Has my femoral neck been imaged and cleared?</li>
-                <li>Was the fracture open, and how long will I be on antibiotics?</li>
-                <li>Will the nail ever need to come out?</li>
-                <li>When is it safe to drive, and when can I return to work?</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Distal femur -->
-      <div class="panel" id="panel-distal" role="tabpanel" aria-labelledby="tab-distal" hidden>
-        <div class="injury">
-          <div>
-            <h3>Distal femur fracture</h3>
-            <p class="muted">A break through the flared lower end of the femur, just above — and sometimes into — the knee joint.</p>
-            <div class="codes"><span class="badge badge-accent">AO/OTA 33</span><span class="badge">Extra- vs. intra-articular</span></div>
-
-            <h4>What broke</h4>
-            <p>This fracture has two very different faces. In older adults with thinner bone it follows a simple fall and often occurs above a knee replacement. In younger adults it is a high-energy injury, and the fracture frequently splits the joint surface into pieces (intra-articular). Where the fracture runs relative to the joint surface decides how it is treated and how the knee moves afterward.</p>
-
-            <h4>How it is usually fixed</h4>
-            <p>The two main tools are a long locking plate along the outer side of the femur and a retrograde nail passed up from the knee. When the joint surface is broken, the pieces are rebuilt and held with screws first, then the whole block is attached back to the shaft. This is a fracture where surgeons argue about the right implant — and where getting the length, rotation and alignment right matters more than which metal is chosen.</p>
-
-            <h4>Recovery</h4>
-            <p>Knee motion starts within days, because a stiff knee is the most common lasting problem. Weight-bearing is usually limited for 6 to 12 weeks, with X-rays at 2, 6 and 12 weeks. Distal femur fractures are slower to heal than shaft fractures — 4 to 6 months is typical — and some need a second procedure to encourage healing.</p>
-          </div>
-          <div class="aside-stack">
-            <div class="placeholder" aria-hidden="true">AP/lateral knee radiograph · placeholder</div>
-            <div class="facts">
-              <dl>
-                <div class="row"><dt>Typical patient</dt><dd>Two peaks: young high-energy · older low-energy</dd></div>
-                <div class="row"><dt>Operations</dt><dd>Lateral locking plate · retrograde nail · both together</dd></div>
-                <div class="row"><dt>Hospital stay</dt><dd>3–6 days</dd></div>
-                <div class="row"><dt>Knee motion</dt><dd>Begins within the first week</dd></div>
-                <div class="row"><dt>Weight-bearing</dt><dd>Often restricted 6–12 weeks</dd></div>
-                <div class="row"><dt>Bone healed</dt><dd>4–6 months</dd></div>
-              </dl>
-            </div>
-            <div class="card">
-              <h4 style="margin:0 0 12px">Questions to ask your surgeon</h4>
-              <ul class="questions">
-                <li>Does the fracture enter the knee joint, and what does that mean for arthritis later?</li>
-                <li>What knee motion should I have by 6 weeks?</li>
-                <li>How will you know the bone is healing, and what if it isn't?</li>
-                <li>Do I need a knee brace, and for how long?</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Periprosthetic -->
-      <div class="panel" id="panel-peri" role="tabpanel" aria-labelledby="tab-peri" hidden>
-        <div class="injury">
-          <div>
-            <h3>Fractures around a hip or knee replacement</h3>
-            <p class="muted">A break in the femur next to — or between — the metal of an existing joint replacement.</p>
-            <div class="codes"><span class="badge badge-accent">Periprosthetic</span><span class="badge">Vancouver A–C</span><span class="badge">Interprosthetic</span></div>
-
-            <h4>What broke</h4>
-            <p>Bone next to an implant carries stress differently, and after a replacement the femur can fracture around the stem after a fall that would otherwise cause a bruise. When someone has both a hip and a knee replacement in the same leg, the bone between them can break — an interprosthetic fracture — which is one of the harder problems in fracture surgery and the subject of a multi-centre study I'm part of.</p>
-
-            <h4>How it is usually fixed</h4>
-            <p>The first question is whether the implant is still firmly attached to the bone. If it is, the fracture is fixed around it with a long plate, cables or a combination. If the stem has loosened, the replacement itself has to be revised to a longer stem that reaches past the fracture. These are longer operations with more blood loss, done by surgeons who do both fracture and revision joint surgery.</p>
-
-            <h4>Recovery</h4>
-            <p>Expect a slower course than a straightforward hip fracture: a longer hospital stay, often a period of protected weight-bearing, and 4 to 6 months to a healed X-ray. Because these patients are usually older and have had previous surgery, the medical side of recovery — heart, lungs, kidneys, nutrition — deserves as much attention as the bone.</p>
-          </div>
-          <div class="aside-stack">
-            <div class="placeholder" aria-hidden="true">Full-length femur radiograph · placeholder</div>
-            <div class="facts">
-              <dl>
-                <div class="row"><dt>Typical patient</dt><dd>Older, existing hip and/or knee replacement</dd></div>
-                <div class="row"><dt>Key question</dt><dd>Is the implant still fixed to bone?</dd></div>
-                <div class="row"><dt>Operations</dt><dd>Plate fixation · revision to a long stem · both</dd></div>
-                <div class="row"><dt>Hospital stay</dt><dd>4–7 days</dd></div>
-                <div class="row"><dt>Weight-bearing</dt><dd>Depends on fixation; often protected 6–12 weeks</dd></div>
-                <div class="row"><dt>Bone healed</dt><dd>4–6 months</dd></div>
-              </dl>
-            </div>
-            <div class="card">
-              <h4 style="margin:0 0 12px">Questions to ask your surgeon</h4>
-              <ul class="questions">
-                <li>Is my implant loose, and are you fixing the bone or revising the replacement?</li>
-                <li>Should a joint-replacement surgeon be involved as well?</li>
-                <li>How much blood loss do you expect, and will I need a transfusion?</li>
-                <li>What is my long-term plan to protect the rest of this bone?</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="small muted" style="margin-top:40px;max-width:66ch">These guides describe how hip and femur fractures are commonly managed. They are general education, not a diagnosis or a treatment plan for you, and they do not replace a conversation with the surgeon who has seen your imaging.</p>
-    </div>
-  </section>
+<main>
 
   <!-- ================= ABOUT ================= -->
-  <section class="section" id="about" aria-labelledby="about-title">
-    <div class="container">
-      <div class="split">
-        <div class="sticky-col">
-          <div class="portrait" aria-hidden="true">Portrait · placeholder</div>
+  <section class="page" id="page-about" aria-labelledby="about-title">
+    <div class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Griffin R. Rechter, MD</p>
+          <h1 id="about-title">A senior resident preparing for a career in orthopaedic trauma.</h1>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#research">See the research</a>
+            <a class="btn btn-secondary" href="Griffin-Rechter-CV.pdf" download>Download CV</a>
+          </div>
+        </div>
+        <div class="portrait" aria-hidden="true">Portrait · placeholder</div>
+      </div>
+    </div>
+
+    <div class="section band-sunken">
+      <div class="container split">
+        <div class="sticky">
+          <p class="eyebrow">About me</p>
+          <h2>Where I've been, and where I'm headed.</h2>
+        </div>
+        <div class="prose">
+          <p>I grew up in Houston. I graduated magna cum laude from San Diego State University and got my MD from Texas Christian University, graduating with honors.</p>
+          <p>I'm now a fourth-year orthopaedic surgery resident at Orlando Health Jewett Orthopaedic Institute, a Level I trauma center. Most of my research is in orthopaedic trauma — fractures around implants, femoral neck fractures in young adults, and how implants behave in bone.</p>
+          <p>Next is an orthopaedic trauma fellowship, then practice as a trauma surgeon. I'm open on geography.</p>
+          <p>Outside the hospital I play guitar, train in mixed martial arts and boxing, surf, ski and snowboard, and speak conversational Spanish.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container split">
+        <div class="sticky">
+          <p class="eyebrow">Training</p>
+          <h2>Education and appointments</h2>
         </div>
         <div>
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">Griffin Rechter, MD</h2>
-          <p class="lead" style="margin-top:20px">Orthopaedic surgery resident, heading into orthopaedic trauma.</p>
-          <div class="prose" style="margin-top:24px">
-            <p>I'm a fourth-year orthopaedic surgery resident at Orlando Health Jewett Orthopaedic Institute, a high-volume program whose trauma service covers a Level I trauma centre. Most of my week is spent on the injuries this site describes: hip fractures in older adults, long-bone fractures after high-energy trauma, and the fractures that happen around joint replacements.</p>
-            <p>I came to orthopaedics through TCU School of Medicine, where I was part of the inaugural graduating class. I chose trauma because it is the part of orthopaedics where the decision matters most and the feedback is fastest — the follow-up X-ray at 6 weeks tells you whether you were right.</p>
-            <p>Outside the operating room I run and contribute to clinical research, most of it on the fractures I treat: how displaced femoral neck fractures do after fixation versus arthroplasty, how interprosthetic femur fractures are best managed, how to reliably find the occult femoral neck fracture that hides behind a femoral shaft fracture, and how screw configuration affects medial malleolus fixation. I'm also part of the MARS Group's ten-year follow-up of revision ACL reconstruction.</p>
-            <p>The next step is an orthopaedic trauma fellowship, then practice as a fellowship-trained trauma surgeon. Where that practice ends up is open — I'm interested in the right team and the right patients more than a particular map pin.</p>
-          </div>
-
-          <dl class="cred">
-            <div><dt>Current role</dt><dd>PGY-4 orthopaedic surgery resident, Orlando Health Jewett Orthopaedic Institute</dd></div>
-            <div><dt>Medical school</dt><dd>Doctor of Medicine, TCU School of Medicine — inaugural class</dd></div>
-            <div><dt>Subspecialty</dt><dd>Orthopaedic trauma (fellowship, 2027 match cycle)</dd></div>
-            <div><dt>Clinical interests</dt><dd>Hip and femur fractures · pelvis and acetabulum · periprosthetic and interprosthetic fractures · periarticular lower-extremity injuries</dd></div>
-            <div><dt>Academic interests</dt><dd>Outcomes research · systematic review · resident education and curriculum design</dd></div>
-          </dl>
-
-          <h3 style="margin-top:48px;margin-bottom:8px">Research in motion</h3>
-          <p class="muted small" style="margin-bottom:8px">Projects at manuscript, revision or data-analysis stage. Reprints on request.</p>
-          <ul class="research">
-            <li><div><b>Fixation versus arthroplasty for femoral neck fractures</b><span>Comparative outcomes of ORIF and total hip arthroplasty cohorts</span></div><span class="badge">Analysis</span></li>
-            <li><div><b>Interprosthetic femur fractures</b><span>Multi-centre study of fractures between ipsilateral hip and knee replacements</span></div><span class="badge">Revision</span></li>
-            <li><div><b>Diagnosing occult ipsilateral femoral neck fractures</b><span>Systematic review of imaging modalities in femoral shaft fractures</span></div><span class="badge">Manuscript</span></li>
-            <li><div><b>Medial malleolus screw fixation</b><span>Comparative study of screw configurations · Journal of Orthopaedic Trauma</span></div><span class="badge">Revision</span></li>
-            <li><div><b>Revision ACL reconstruction at 10 years</b><span>MARS Group multi-centre outcomes cohort</span></div><span class="badge">Manuscript</span></li>
+          <ul class="timeline">
+            <li><span class="when">2023 –</span><div><b>Orthopaedic surgery residency</b><span>Orlando Health Jewett Orthopaedic Institute · Orlando Regional Medical Center</span></div></li>
+            <li><span class="when">2023</span><div><b>Doctor of Medicine</b><span>Anne Burnett Marion School of Medicine at Texas Christian University · inaugural class · Honors recipient, top 15% of class</span></div></li>
+            <li><span class="when">2019</span><div><b>BA/BS, Biology, Chemistry and Psychology</b><span>San Diego State University · magna cum laude · Phi Beta Kappa</span></div></li>
           </ul>
+
+          <div class="grid-2" style="margin-top:32px">
+            <div class="card">
+              <h3>Leadership</h3>
+              <ul>
+                <li>Resident member, Online Discussion Forum Committee, Orthopaedic Trauma Association<span class="when">Elected · 2026 – 2028</span></li>
+                <li>Organizer, Orthopaedic Trauma Journal Club, Orlando Regional Medical Center<span class="when">2026 –</span></li>
+                <li>Member, Pelvic Fracture Hospital Consensus Committee, Orlando Regional Medical Center<span class="when">2025 –</span></li>
+                <li>Founder and president, Orthopaedic Surgery Interest Group, TCU School of Medicine<span class="when">2019 – 2023</span></li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Awards and honors</h3>
+              <ul>
+                <li>Orlando Health Research Award<span class="when">2025 · 2026</span></li>
+                <li>First-place podium presentation, JPS Research &amp; Quality Symposium<span class="when">2021</span></li>
+                <li>Texas Cares Patient Safety Award<span class="when">2021</span></li>
+                <li>Honors in all clinical rotations · Honors recipient, TCU School of Medicine<span class="when">2019 – 2023</span></li>
+                <li>Magna cum laude · Phi Beta Kappa · Order of Omega · Golden Key · NSCS · Dean's List, San Diego State<span class="when">2015 – 2019</span></li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Grant funding</h3>
+              <ul>
+                <li>Foundation of Orthopaedic Trauma grant — <i>Three-Dimensional Gait Analysis &amp; Functional Outcomes After Femoral Neck Fractures in a Young Population</i><span class="when">PIs: Michael Beltran, MD · Cory A. Collinge, MD</span></li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Memberships</h3>
+              <ul>
+                <li>Orthopaedic Trauma Association (OTA)</li>
+                <li>American Academy of Orthopaedic Surgeons (AAOS)</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= RESIDENTS ================= -->
-  <section class="section band-inverse" id="residents" aria-labelledby="residents-title">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">For residents</p>
-          <h2 id="residents-title">Read the mechanism before you read the X-ray.</h2>
-          <p class="lead" style="color:var(--bone-300)">Most fracture questions — on the board exam and at 2 a.m. — are answered by asking how the energy got into the bone and where it had to go. Below is the framework I teach on the trauma service, and the two mistakes I see most.</p>
+  <!-- ================= RESEARCH ================= -->
+  <section class="page" id="page-research" aria-labelledby="research-title" hidden>
+    <div class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Research</p>
+          <h2 id="research-title">Publications, presentations and work in progress.</h2>
+          <p class="lead">Most of it is orthopaedic trauma — fractures around implants, femoral neck fractures in young adults, and how implants actually behave in bone. Some of it is sports knee surgery from a mentorship that started in medical school.</p>
         </div>
-      </div>
 
-      <div class="grid-2" style="align-items:start">
-        <div class="framework">
-          <div class="framework-head">
-            <h3>Five questions for every fracture</h3>
-            <span class="mono muted">Consult to plan</span>
+        <div class="stats" id="stats" aria-label="Research output"></div>
+
+        <div class="themes">
+          <div class="theme">
+            <span class="mono">Theme 01</span>
+            <h3>Fractures around implants</h3>
+            <p>Periprosthetic and interprosthetic femur fractures: modular plating systems, nail–plate combinations for Vancouver C and interprosthetic patterns, extremely proximal periprosthetic fractures, and a systematic review of modern fixation strategies.</p>
           </div>
-          <ol>
-            <li><div><b>Mechanism and energy.</b> Fall from standing or motorcycle at 60 mph? Energy predicts soft-tissue injury, associated fractures and how much the bone will tolerate.</div></li>
-            <li><div><b>Host.</b> Age, bone quality, diabetes, smoking, anticoagulation, baseline function. The same X-ray gets a different operation in a 34-year-old and an 84-year-old.</div></li>
-            <li><div><b>Soft-tissue envelope.</b> Open or closed, skin at risk, compartment pressures, pulses. The skin decides the timing; the bone decides the implant.</div></li>
-            <li><div><b>Personality of the fracture.</b> Articular or extra-articular, comminution, the key fragment that must be reduced first, the deforming forces acting on it.</div></li>
-            <li><div><b>Goal and the implant that serves it.</b> Absolute stability for the joint surface, relative stability for the shaft, immediate weight-bearing for the elderly hip. Choose the goal, then the metal.</div></li>
-          </ol>
-        </div>
-        <div style="display:grid;gap:16px">
-          <div class="callout callout-pitfall">
-            <div class="label">Pitfall</div>
-            The ipsilateral femoral neck fracture behind a femoral shaft fracture. Reported in roughly 2–9% of shaft fractures; missed on the initial trauma series in a large share of those. Dedicated AP internal-rotation hip radiograph, fine-cut CT of the neck, and a fluoroscopic look at the neck before and after the nail. Assume it is there until you have proven it is not.
+          <div class="theme">
+            <span class="mono">Theme 02</span>
+            <h3>The young femoral neck fracture</h3>
+            <p>Multicenter work with the Young Femoral Neck Fracture Working Group on neck–shaft combinations, gait after repair, and whether acute total hip arthroplasty beats fixation for the displaced fracture in a young adult.</p>
           </div>
-          <div class="callout callout-pearl">
-            <div class="label">Pearl</div>
-            In a displaced femoral neck fracture in a physiologically young patient, the clock is the reduction, not the incision. An anatomic reduction at 18 hours beats a poor one at 6. Get the traction table, get the C-arm in both planes, and don't accept varus.
+          <div class="theme">
+            <span class="mono">Theme 03</span>
+            <h3>Implants and biomechanics</h3>
+            <p>Lag-screw slide across cephalomedullary nail designs, interlocking-screw stability in retrograde nails, high-strength suture cerclage in femur and fibula fixation, and headless compression screws at the medial malleolus.</p>
           </div>
-          <div class="callout callout-evidence">
-            <div class="label">Evidence</div>
-            For displaced femoral neck fractures in patients over 50, the HEALTH trial (Bhandari et al., <i>NEJM</i>, 2019) found no difference in secondary procedures at 24 months between total hip and hemiarthroplasty — a reminder that the fixation-versus-replacement decision matters more than the choice of replacement.
-          </div>
-          <p class="pull" style="margin-top:8px">The follow-up film at six weeks is the most honest teacher in orthopaedics. Learn to want it.</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ================= WORK WITH ME ================= -->
-  <section class="section" id="work" aria-labelledby="work-title">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">For practices, departments and partners</p>
-          <h2 id="work-title">What I bring to a trauma service.</h2>
-          <p class="lead">I'm a fellowship-bound orthopaedic trauma surgeon who wants to build things: a trauma line, a research program, a residency. If you're hiring, recruiting for a fellowship, or building something new, I'd like to hear about it.</p>
+    <div class="section band-sunken">
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Type of work" id="pub-tabs"></div>
+        <div class="toolbar">
+          <div class="filters">
+            <button class="chip" id="first-author" aria-pressed="false" type="button">First author only</button>
+            <span class="small muted" id="result-count"></span>
+          </div>
+          <label class="search">
+            <span class="visually-hidden">Search titles, authors and journals</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" id="pub-search" placeholder="Search titles, authors, journals" autocomplete="off">
+          </label>
         </div>
-      </div>
-      <div class="grid-3">
-        <div class="card offer">
-          <p class="eyebrow">Clinical</p>
-          <h3>Trauma call you can rely on</h3>
-          <p>Training on a high-volume Level I trauma service, with a fellowship in orthopaedic trauma to follow. Hip and femur fractures, pelvis and acetabulum, periarticular and periprosthetic injuries, and the medical management around them.</p>
-        </div>
-        <div class="card offer">
-          <p class="eyebrow">Academic</p>
-          <h3>A research program, not a side project</h3>
-          <p>Active multi-centre collaborations, first-author manuscripts in revision at the <i>Journal of Orthopaedic Trauma</i>, and a habit of turning clinical questions into datasets. I'd rather join a service that measures its outcomes — or help one start.</p>
-        </div>
-        <div class="card offer">
-          <p class="eyebrow">Education</p>
-          <h3>Building programs and teaching residents</h3>
-          <p>Long-term interest in helping build and lead an orthopaedic surgery residency program — curriculum, case conference, mentorship. I teach by framework rather than by fact and I enjoy the work of making a service teachable.</p>
-        </div>
-      </div>
-      <div class="cta-panel" style="margin-top:32px">
-        <div>
-          <h3>Let's talk about your service.</h3>
-          <p class="muted" style="margin-top:8px;margin-bottom:0">CV, publication list and references on request. I'm open on geography — the right team and patient population matter more to me than the city.</p>
-        </div>
-        <div class="actions">
-          <a class="btn btn-primary" href="mailto:contact@orthotraumadoc.com?subject=Opportunity%20for%20Dr.%20Rechter">Request my CV</a>
-          <a class="btn btn-secondary" href="#about">Read my background</a>
-        </div>
+        <ol class="pubs" id="pub-list"></ol>
+        <p class="list-note">Author lists are as they appear on the published or submitted work. A full CV with citations is available for <a href="Griffin-Rechter-CV.pdf" download>download</a>.</p>
       </div>
     </div>
   </section>
 
   <!-- ================= CONTACT ================= -->
-  <section class="section band-sunken" id="contact" aria-labelledby="contact-title">
-    <div class="container">
-      <div class="section-head">
+  <section class="page" id="page-contact" aria-labelledby="contact-title" hidden>
+    <div class="section">
+      <div class="container contact-grid">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">One address. Tell me which door you came through.</h2>
-          <p class="lead">Email is the fastest way to reach me. I read everything; I reply to patients, residents and recruiters in that order.</p>
+          <h2 id="contact-title">Email is the fastest way to reach me.</h2>
+          <p class="lead" style="margin-top:14px">Whether you're a program director, a practice recruiting for trauma, a collaborator with a dataset, or a student thinking about orthopaedics — I read everything and reply to all of it.</p>
+          <a class="contact-email" href="mailto:griffinrechter@gmail.com">griffinrechter@gmail.com</a>
+          <p class="small muted">CV, publication list and references available on request.</p>
+          <div class="hero-actions" style="margin-top:22px">
+            <a class="btn btn-primary" href="mailto:griffinrechter@gmail.com?subject=Hello%20from%20orthotraumadoc.com">Send an email</a>
+            <a class="btn btn-secondary" href="Griffin-Rechter-CV.pdf" download>Download CV</a>
+          </div>
         </div>
-      </div>
-      <div class="contact-grid">
-        <div class="card contact-card">
-          <h3>Patients and families</h3>
-          <p>Questions about a hip or femur fracture, what a report means, or what to ask at your next visit. I can't give individual medical advice by email, but I can point you to the right questions.</p>
-          <a class="email" href="mailto:contact@orthotraumadoc.com?subject=Patient%20question">contact@orthotraumadoc.com</a>
+        <div class="card">
+          <h3>Good reasons to write</h3>
+          <ul class="ways">
+            <li><span class="k">Fellowship programs</span><span>Orthopaedic trauma fellowship, 2027 match cycle. Letters and case logs on request.</span></li>
+            <li><span class="k">Practices and hospitals</span><span>Trauma-focused positions beginning after fellowship. Open on geography.</span></li>
+            <li><span class="k">Research</span><span>Multicenter collaborations in periprosthetic fractures, young femoral neck fractures and implant outcomes.</span></li>
+            <li><span class="k">Students and residents</span><span>Questions about the match, research, or a career in orthopaedic trauma.</span></li>
+            <li><span class="k">Speaking</span><span>Journal club, grand rounds, and regional or national meetings.</span></li>
+          </ul>
         </div>
-        <div class="card contact-card">
-          <h3>Residents and students</h3>
-          <p>Teaching material, research collaboration, rotation questions, or how to approach a fracture you saw on call last night.</p>
-          <a class="email" href="mailto:contact@orthotraumadoc.com?subject=Resident%20question">contact@orthotraumadoc.com</a>
-        </div>
-        <div class="card contact-card">
-          <h3>Practices and recruiters</h3>
-          <p>Job opportunities, fellowship inquiries, speaking, or building a trauma or residency program. Include the service, the call structure and the timeline.</p>
-          <a class="email" href="mailto:contact@orthotraumadoc.com?subject=Opportunity%20for%20Dr.%20Rechter">contact@orthotraumadoc.com</a>
-        </div>
-      </div>
-      <div class="callout callout-warning" style="margin-top:32px;max-width:66ch">
-        <div class="label">If this is an emergency</div>
-        Do not email. Call 911 or go to the nearest emergency department. Nothing on this site is monitored for urgent messages.
       </div>
     </div>
   </section>
@@ -807,92 +385,199 @@
 
 <footer class="site-footer">
   <div class="container">
-    <div>
-      <a class="wordmark" href="#top"><span class="mark" aria-hidden="true"></span>The Ortho Trauma Doc</a>
-      <p>Griffin Rechter, MD. Orthopaedic surgery resident, heading into orthopaedic trauma. The content on this site is general education written by one surgeon-in-training. It is not medical advice, does not create a doctor–patient relationship, and does not replace the judgement of the surgeon who has examined you and seen your imaging. Any case material shown is de-identified and used with consent.</p>
-    </div>
-    <div>
-      <ul>
-        <li><a href="#patients">If you're injured</a></li>
-        <li><a href="#injuries">Understand your injury</a></li>
-        <li><a href="#about">About Dr. Rechter</a></li>
-        <li><a href="#residents">For residents</a></li>
-        <li><a href="#work">Work with me</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footnote">
-      <span>© <span id="year">2026</span> The Ortho Trauma Doc · Griffin Rechter, MD</span>
-      <span>Views are my own and not those of any hospital, residency program or university.</span>
-    </div>
+    <a class="wordmark" href="#about"><span class="mark" aria-hidden="true"></span>The Ortho Trauma Doc</a>
+    <span>© <span id="year">2026</span> Griffin R. Rechter, MD · Views are my own and not those of any hospital, residency program or university.</span>
   </div>
 </footer>
 
 <script>
-  (function () {
-    // Footer year
-    var y = document.getElementById('year');
-    if (y) y.textContent = String(new Date().getFullYear());
+(function () {
+  'use strict';
 
-    // Mobile nav
-    var toggle = document.getElementById('nav-toggle');
-    var nav = document.getElementById('site-nav');
-    if (toggle && nav) {
-      toggle.addEventListener('click', function () {
-        var open = nav.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-      nav.addEventListener('click', function (e) {
-        if (e.target.closest('a')) {
-          nav.classList.remove('is-open');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
+  /* ---------------- Data (from CV, 2026) ---------------- */
+  var DATA = {
+    peer: [
+      {y:2026,a:"Rechter GR, Collinge CA, Shaath MK, Page BE, Langford JR, Haidukewych GJ",t:"Results of a Novel Modular Plating System for Periprosthetic Fractures Around the Hip: A Multi-Center Experience",j:"Journal of Arthroplasty",d:"2026"},
+      {y:2026,a:"Page BE, Shaath MK, Baker TJ, Rechter GR, Casin A, Yawman JP, Jacobs ED, Langford JR, Haidukewych GJ",t:"Effects of Insert Material on Interlocking Screw Stability in Retrograde Femoral Nailing: UHMWPE vs PEEK",j:"Journal of Orthopaedic Trauma",d:"2026;40(6):324-328"},
+      {y:2026,a:"Rechter GR, Page BE, Shaath MK, Nasir A, Baker TJ, Langford JR, Haidukewych GJ",t:"Closed Reduction and Intramedullary Nailing of Atypical Femur Fractures Results in High Rates of Fracture Union",j:"Injury",d:"2026;57(4):113144"},
+      {y:2026,a:"Daniel AV, Rechter GR, Barrera LE, Hevesi MA, Tagliero AJ, Okoroha KR, Krych AJ, Levy BA",t:"Arthroscopic Posterior Capsular Releases for Recalcitrant Arthrofibrosis",j:"Video Journal of Sports Medicine",d:"2026;6(4)"},
+      {y:2026,a:"Rechter GR, Khan AM, Tagliero AJ, Kannan AS, Levy BR, Krych AJ, Levy BA",t:"How to Set Anterior and Posterior Tibial Translation for Combined Anterior Cruciate Ligament and Posterior Cruciate Ligament Reconstruction",j:"Arthroscopy",d:"2026"},
+      {y:2026,a:"Page B, Rechter GR, Shaath MK, Langford J, Haidukewych GJ",t:"Decreased Rates of Avascular Necrosis in Displaced Talar Neck Fractures When Using Plate Fixation versus Screw Fixation Alone",j:"European Journal of Orthopaedic Trauma",d:"2026"},
+      {y:2026,a:"Page BE, Shaath MK, Rechter GR, Nasir BA, Baker TJ, Yawman JP, Jacobs ED, Langford JR, Haidukewych GJ",t:"A Dual Implant Approach to Vancouver C Femur Fractures: Improved Outcomes with Retrograde Nail and Lateral Plate Fixation Compared to Lateral Locked Plating",j:"Journal of Orthopaedic Trauma",d:"2026"},
+      {y:2026,a:"Bishop AK, Rechter GR, Levy BR, Hevesi MA, Krych AJ, Levy BA",t:"How to Avoid Tunnel Convergence of Anterior Cruciate Ligament and Lateral Collateral Ligament/Posterolateral Corner Sockets in Multiligamentous Knee Reconstructions",j:"Arthroscopy",d:"2026, in press"},
+      {y:2026,a:"Rechter GR, Reed LA, Khan AM, Deliso M, Hevesi M, Krych AJ, Levy BA",t:"Complications and Reoperations Following Meniscal Repair and Transplantation",j:"Current Reviews in Musculoskeletal Medicine",d:"2026;19(1):18"},
+      {y:2025,a:"Rechter GR, Tagliero AJ, Barrera LA, Hevesi MA, Okoroha KR, Krych AJ, Levy BA",t:"Anterior Cruciate Ligament Reconstruction with Bone Patellar Tendon Bone Autograft: Top 10 Pearls",j:"Arthroscopy Techniques",d:"2025;14:103796"},
+      {y:2025,a:"Daniel VA, Rechter GR, Reed LA, Williams WA, Carbone AD, Kannan AS",t:"Patellar Tendon Repair with Bioinductive Implant Augmentation",j:"Arthroscopy Techniques",d:"2025;14(7):103639"},
+      {y:2025,a:"Rechter GR, Barrera L, Daniel VA, Hevesi M, Krych AJ, Tagliero A, Levy BA",t:"Distal Medial Collateral Ligament Avulsion Repair",j:"Arthroscopy Techniques",d:"2025;14(6):103525"},
+      {y:2025,a:"Shaath MK, Page BE, Kosko B, Rechter GR, Nassir B, Jacobs E, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Interprosthetic Femoral Fractures: Surgical Technique and Case Series",j:"European Journal of Orthopaedic Surgery & Traumatology",d:"2025;35(1):253"},
+      {y:2025,a:"Shaath MK, Page B, Nasir BA, Rechter GR, Casin A, Yawman YP, Jacobs E, Langford JR, Haidukewych GJ",t:"Excellent Results with Low Reoperation Rates after Fixation of Patella Fractures with a New Anatomically Contoured Plating System",j:"Journal of Orthopaedic Trauma",d:"2025, online ahead of print"},
+      {y:2025,a:"Rechter GR, Levy BA, Krych AJ, Hevesi M",t:"Cartilage Lesions of the Hip",j:"Clinics in Sports Medicine",d:"2025;44(3):633-648"},
+      {y:2025,a:"Shaath MK, Ferreira R, Page B, Rechter GR, Nasir BA, Haidukewych GJ",t:"The Impact of Time to Surgical Debridement on Infection Rates in Open Tibial Shaft Fractures Treated with Immediate Medullary Nailing",j:"Journal of Orthopaedic Trauma",d:"2025, online ahead of print"},
+      {y:2025,a:"Shaath MK, Page B, Nassir BA, Rechter GR, Haidukewych GJ",t:"Increased Lag Screw Slide in a New Generation Cephalomedullary Nail after Treatment of Geriatric Intertrochanteric Femoral Fractures",j:"Journal of Orthopaedic Trauma",d:"2025;39(5):252-260"},
+      {y:2025,a:"Wassef C, Rechter GR, Tatapudi S, Sambhariya V, Pientka WJ",t:"The Effect of Radial Inclination on the Stage of Kienböck's Disease at Time of Initial Diagnosis",j:"HAND",d:"2025;(3):365-370"},
+      {y:2024,a:"Rechter GR, Anthony RT, Rennard J, Kellam JF, Warner SJ",t:"The Impact of Early Axial Interfragmentary Motion on the Fracture Healing Environment: A Scoping Review",j:"Injury",d:"2024;55(12):111917"},
+      {y:2024,a:"Rechter GR, Collinge CA, Rechter AJ, Gardner MJ, Sagi HC, Archdeacon MT, Mir HR, Rodriguez-Buitrago A, Mitchell P, Beltran MT, Young Femoral Neck Fracture Working Group",t:"Femoral Neck Fractures with Associated Ipsilateral Femoral Shaft Fractures in Young Adults <50 Years Old: A Multicenter Comparison of 80 Cases Versus Isolated Femoral Neck Fractures",j:"Journal of Orthopaedic Trauma",d:"2024;38(8):410-417"},
+      {y:2023,a:"Rechter GR, Mason E, Levy BA",t:"Gracilis-Sparing Anterior Cruciate Ligament Hamstring Graft Reconstruction Is Less Invasive Than Semitendinosus-Gracilis Graft Harvest and Shows No Clinical Difference in Outcomes With Grafts Greater Than 8 mm in Diameter",j:"Arthroscopy",d:"2023"},
+      {y:2023,a:"Fijany A, Rechter GR, Olsson S, Downey M, Pekarev M",t:"Prophylactic Gracilis Muscle Free Flap Transfer in a High-Risk Ankle Arthroplasty Patient",j:"Orthoplastic Surgery",d:"2023;12(1):15-19"},
+      {y:2022,a:"Scofield H, Teigen K, Blair S, Rechter GR, Webb B",t:"Implementation of a Pre-Operative Huddle at a Level 1 Trauma Center",j:"Journal of Patient Safety",d:"2022;18(4):e717-e752"},
+      {y:2021,a:"Rechter GR, Brotherton S",t:"Treatment of End-Stage Osteoarthritis and Concurrent Bony Metastasis to the Distal Metaphysis with a Modified Total Knee Arthroplasty: A Case Report & Review of the Literature",j:"Journal of Orthopaedic Surgery and Techniques",d:"2021;4(1):239-242"}
+    ],
+    pending: [
+      {y:2026,a:"Rechter GR, Hedbany DT, Shaath MK, Jacobs ED, Haidukewych GJ",t:"Operative Fixation of Interprosthetic Femur Fractures: A Systematic Review of Modern Fixation Strategies and Outcomes",j:"JAAOS",s:"Submitted"},
+      {y:2026,a:"Rechter GR, Langford JR, Page BE, Baker TB, Yawman J, Shaath MK, Haidukewych GJ",t:"Headless Compression Screws Reduce Symptomatic Hardware After Medial Malleolus Fixation: A Comparative Cohort Study",j:"Journal of Orthopaedic Trauma",s:"Under review"},
+      {y:2026,a:"Rechter GR, Collinge CA, Long JT, Beltran MJ, Patterson JT, Morshed S, Goto S, Garrison CJ, Archdeacon MT",t:"Minimal Gait Disturbance After Uncomplicated Repair of Femoral Neck Fractures in Young Adults at Mid-Term Follow-Up",j:"JAAOS Global Research & Reviews",s:"Submitted"},
+      {y:2026,a:"Rechter GR, Hedbany D, Shaath MK, Haidukewych GJ",t:"Computed Tomography Detection of a Traumatic Arthrotomy: A Scoping Review",j:"Advances in Orthopedics",s:"Submitted"},
+      {y:2026,a:"Rechter GR, Shaath MK, Hedbany DT, Casin A, Langford JR, Haidukewych GJ",t:"Trends in Orthopedic Trauma Research: A 30-Year Analysis of Orthopaedic Trauma Association Annual Meeting Abstracts",j:"Journal of Orthopaedic Trauma",s:"Submitted"},
+      {y:2026,a:"Encinas R, Rechter GR, Casin A, Yawman J, Haidukewych GJ, Shaath MK",t:"High Strength Suture-Based Cerclage Augmentation for Maintaining Reduction in Distal Fibular Intramedullary Nailing: A Novel Technique and Case Series",j:"OTA International",s:"Submitted"},
+      {y:2026,a:"Rechter GR, Yawman JP, Baker TJ, Galloway J, Jacobs EJ, Warner SJ, Shaath MK",t:"Clinical and Radiographic Outcomes Following High-Strength Suture Cerclage Augmentation of Femoral Fractures: A Multicenter Experience",j:"OTA International",s:"Submitted"},
+      {y:2026,a:"Miller AJ, Rechter GR, Haidukewych GJ",t:"Open Reduction & Internal Fixation of Extremely Proximal Periprosthetic Femur Fractures",j:"Bone & Joint Journal",s:"Submitted"},
+      {y:2026,a:"Rechter GR, Baker TJ, Landis G, Page B, Yawman J, Langford JR, Haidukewych GJ, Shaath MK",t:"Priorities in Match: What Medical Students Value When Ranking Orthopaedic Surgery Programs",j:"JAAOS",s:"Submitted"},
+      {y:2026,a:"Tagliero A, Rechter GR, Yanamala S, Page B, Williams J, Levy BA",t:"Clinical Outcomes of Multiligamentous Knee Fracture Dislocation at Minimum 2-Year Follow-Up",j:"Journal of Knee Surgery",s:"Accepted"}
+    ],
+    chapters: [
+      {y:2025,a:"Rechter GR, Levy BA, Krych AJ, Hevesi MA",t:"Cartilage Lesions of the Hip",j:"In: Lee CA, ed. Cartilage. Clinics in Sports Medicine, vol 44. Elsevier",d:"2025; chap. 16, pp. 633-648"}
+    ],
+    podium: [
+      {y:2026,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"ORIF versus Acute THA for Displaced Femoral Neck Fractures in Young Adults",j:"OREF Southeast Resident Research Symposium",d:"Orlando, FL · Aug 2026"},
+      {y:2026,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"Rethinking Fixation: Early-to-Mid Term Outcomes of Acute Total Hip Arthroplasty for Displaced Femoral Neck Fractures in Young Adults",j:"Rothman Orthopaedic Surgery Research Symposium",d:"Orlando, FL · Jun 2026"},
+      {y:2026,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"Rethinking Fixation: Early-to-Mid Term Outcomes of Acute Total Hip Arthroplasty for Displaced Femoral Neck Fractures in Young Adults",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
+      {y:2026,a:"Haidukewych GJ, Rechter GR, Miller A, Green C",t:"Nail-Plate Antibiotic Spacer for Complex Prosthetic Joint Infections",j:"International Hip Society Meeting",d:"Melbourne, Australia · 2026"},
+      {y:2026,a:"Haidukewych GJ, Rechter GR, Miller A, Green C",t:"Outcomes following ORIF of Extremely Proximal Periprosthetic Fractures",j:"International Hip Society Meeting",d:"Melbourne, Australia · 2026"},
+      {y:2026,a:"Haidukewych GJ, Rechter GR, Baker TJ, Green C, Shaath MK, Langford JR",t:"Results of Acute Total Hip Arthroplasty for Acute Displaced Femoral Neck Fractures in Middle-Aged Patients through the Direct Anterior Approach",j:"International Hip Society Meeting",d:"Melbourne, Australia · 2026"},
+      {y:2025,a:"Haidukewych GJ, Rechter GR, Green C, Jacobs ED, Shaath MK",t:"Results of a Novel Modular Plating System for Periprosthetic Fractures Around the Hip: A Multi-Center Experience",j:"International Hip Society Meeting",d:"2025"},
+      {y:2025,a:"Shaath MK, Shurafa ST, Yawman JP, Page B, Rechter GR, Langford JR, Haidukewych GJ",t:"The Utility of the AP Pelvis Radiograph in Diagnosing Traumatic Hip Dislocation",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
+      {y:2025,a:"Shaath MK, Page B, Rechter GR, Kosko B, Nasir BA, Jacobs ED, Langford JR, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Interprosthetic Femoral Fractures: Technical Note and Case Series",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
+      {y:2025,a:"Page B, Shaath MK, Nasir BA, Rechter GR, Langford JR, Haidukewych GJ",t:"Isolated Screw Versus Plate and Screw Fixation in Talar Neck Fractures: A Retrospective Comparative Analysis",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
+      {y:2025,a:"Weingart M, Shaath MK, Rechter GR, Page B, Langford J, Haidukewych GJ",t:"Avascular Necrosis Rate is Construct Dependent in Talar Neck Fractures",j:"Clinical Orthopaedic Society",d:"Amelia Island, FL · Sep 2025"},
+      {y:2025,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"The Case for Less: Closed Reduction & Intramedullary Nailing of Atypical Femur Fractures",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2025"},
+      {y:2024,a:"Rechter GR, Shaath MK",t:"The Detection of Traumatic Arthrotomies Utilizing Computed Tomography vs. Saline Load Test at a Level One Trauma Center",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2024"},
+      {y:2023,a:"Rechter GR, Collinge CA, Finlay A, Beltran MJ, Buitrago A, Mitchell P, Mir H, Gardner MJ, Archdeacon M, Tornetta P",t:"Comparative Outcomes of 80 Femoral Neck Fractures in Young Adult Patients with Ipsilateral Neck-Shaft Fractures Treated at 26 North American Trauma Centers",j:"Orthopaedic Trauma Association Annual Meeting",d:"Seattle, WA · Oct 2023"},
+      {y:2023,a:"Rechter GR, Anthony R, Rennard J, Kellam JF, Warner SJ",t:"Early Axial Interfragmentary Motion and its Impact on the Fracture Healing Environment: A Scoping Review",j:"AAOS Annual Meeting",d:"Las Vegas, NV · Mar 2023"},
+      {y:2021,a:"Rechter GR, Scofield H, Webb B",t:"Implementation of a Pre-Operative Huddle at a Level 1 Trauma Center",j:"John Peter Smith Research & Quality Symposium",d:"Fort Worth, TX · Jun 2021 · First-place podium award"}
+    ],
+    poster: [
+      {y:2026,a:"Rechter GR, Encinas R, Page BE, Baker TJ, Jacobs ED, Yawman J, Shaath MK, Haidukewych GJ",t:"Cerclage Augmentation for Maintaining Reduction in Distal Fibula Fractures Treated with Intramedullary Nailing",j:"Orthopaedic Trauma Association Annual Meeting",d:"Nashville, TN · 2026"},
+      {y:2026,a:"Rechter GR, Page BE, Druskovich K, Young M, Baker TJ, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Orthopaedic Trauma Association Annual Meeting",d:"Nashville, TN · 2026"},
+      {y:2026,a:"Rechter GR, Baker TJ, Galloway J, Page B, Yawman J, Warner SJ, Shaath MK",t:"FiberTape Cerclage Augmentation in Femur Fracture Fixation: A Multicenter Experience",j:"Orthopaedic Trauma Association Annual Meeting",d:"Nashville, TN · 2026"},
+      {y:2026,a:"Baker TJ, Young M, Rechter GR, Page BE, Druskovich K, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Rothman Orthopaedic Surgery Research Symposium",d:"Orlando, FL · Jun 2026"},
+      {y:2026,a:"Young M, Baker TJ, Rechter GR, Page BE, Druskovich K, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
+      {y:2026,a:"Weingart M, Rechter GR, Encinas R, Shaath MK",t:"High-Strength Suture Cerclage Augmentation to Maintain Reduction in Distal Fibula Fractures Treated with Intramedullary Nailing: A Technique Note & Case Series",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
+      {y:2026,a:"Baker TJ, Rechter GR, Langford JR, Shaath MK",t:"Headless Compression Screws Reduce Symptomatic Hardware After Medial Malleolus Fixation: A Comparative Cohort Study",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
+      {y:2026,a:"Young M, Rechter GR, Page BE, Druskovich K, Baker TJ, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
+      {y:2026,a:"Page BE, Rechter GR, Baker TJ, Jacobs ED, Yawman J, Shaath MK, Haidukewych GJ",t:"A Dual Implant Approach to Vancouver C Periprosthetic Fractures: Improved Outcomes with Lateral Plate and Retrograde Intramedullary Nail",j:"SICOT World Congress",d:"Tokyo, Japan · 2026"},
+      {y:2026,a:"Rechter GR, Patterson J, Morshed S, Beltran MJ, Archdeacon M, Long J, Goto S, Collinge CA",t:"Minimal Gait Disturbance After Successful Repair of Femoral Neck Fractures in Young Adults with <1 cm Shortening at Mid-Term Follow-Up",j:"AAOS Annual Meeting",d:"New Orleans, LA · Mar 2026"},
+      {y:2026,a:"Page B, Shaath MK, Rechter GR, Nasir B, Langford JR, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Vancouver C Periprosthetic Femur Fractures Provides Reliable Healing Rates",j:"AAOS Annual Meeting",d:"New Orleans, LA · Mar 2026"},
+      {y:2025,a:"Rechter GR, Collinge CA, Green C, Jacobs ED, Shaath MK, Haidukewych GJ",t:"Results of a Novel Modular Plating System for Periprosthetic Fractures Around the Hip: A Multi-Center Experience",j:"Current Concepts in Joint Replacement (CCJR)",d:"Orlando, FL · Oct 2025"},
+      {y:2025,a:"Page B, Rechter GR, Shaath MK, Langford J, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Interprosthetic Femoral Fractures (technique video)",j:"Orthopaedic Trauma Association Annual Meeting",d:"Phoenix, AZ · Oct 2025"},
+      {y:2025,a:"Shaath MK, Rechter GR, Page B, Langford JR, Haidukewych GJ",t:"Decreased Rates of Avascular Necrosis in Displaced Talar Neck Fractures When Using Plate Fixation versus Screw Fixation Alone",j:"Orthopaedic Trauma Association Annual Meeting",d:"Phoenix, AZ · Oct 2025"},
+      {y:2025,a:"Shaath MK, Yawman JP, Page B, Rechter GR, Nasir BA, Langford JR, Haidukewych GJ",t:"Unrestricted Weight-Bearing After Percutaneous Fixation of Posterior Malleolar Fractures Associated with Spiral Distal-Third Tibial Shaft Fractures is Safe: A Comparative Cohort Study",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
+      {y:2025,a:"Shaath MK, Rechter GR, Yawman JP, Page B, Nasir BA, Young M, Jacobs ED, Langford JR, Haidukewych GJ",t:"Comparison of Complication Rates in Acute vs. Staged Fixation for Closed Ankle Fracture-Dislocations: A Retrospective Analysis",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
+      {y:2025,a:"Weingart M, Shaath MK, Rechter GR, Page B, Langford J, Haidukewych GJ",t:"Patellar Fracture Fixation with a New Anatomically Contoured Plating System",j:"Clinical Orthopaedic Society",d:"Amelia Island, FL · Sep 2025"},
+      {y:2025,a:"Williams AW, Kannan AS, Kupiszewski S, Daniel A, Rechter GR, Levy BA",t:"Mid- to Long-term Outcomes following Multiligamentous Knee Surgery: A Case Series",j:"Arthroscopy Association of North America",d:"Washington, DC · May 2025"},
+      {y:2023,a:"Rechter GR, Collinge CA, Finlay A, Beltran MJ, Buitrago A, Mitchell P, Mir H, Gardner MJ, Archdeacon M, Tornetta P",t:"Comparative Outcomes of 80 Femoral Neck Fractures in Young Adult Patients with Ipsilateral Neck-Shaft Fractures Treated at 26 North American Trauma Centers",j:"AAOS Annual Meeting",d:"Las Vegas, NV · Mar 2023"},
+      {y:2023,a:"Wassef C, Rechter GR, Tatapudi S, Sambhariya V, Pientka WJ",t:"The Effect of Radial Inclination on the Stage of Kienböck's Disease at Time of Initial Diagnosis",j:"American Society for Surgery of the Hand (ASSH)",d:"Toronto, ON · Sep 2023"},
+      {y:2023,a:"Rechter GR, Wassef C, Tatapudi S, Sambhariya V, Pientka WJ",t:"The Effect of Radial Inclination on the Stage of Kienböck's Disease at Time of Initial Diagnosis",j:"Orthopaedic Research Society Annual Meeting",d:"Dallas, TX · Feb 2023"},
+      {y:2022,a:"Fijany A, Rechter GR, Olsson S, Downey M, Pekarev M",t:"Prophylactic Gracilis Muscle Free Flap Transfer in a High-Risk Ankle Arthroplasty Patient",j:"21st Meeting of the International Society of Limb Salvage",d:"Los Angeles, CA · Sep 2022"},
+      {y:2022,a:"Rechter GR, Anthony R, Rennard J, Kellam J, Warner SJ",t:"Early Axial Interfragmentary Motion and its Impact on the Fracture Healing Environment: A Scoping Review",j:"UNTHSC Research Symposium",d:"Fort Worth, TX · Mar 2022"},
+      {y:2021,a:"Rechter GR, Brotherton S",t:"Treatment of End-Stage Osteoarthritis and Concurrent Bony Metastasis to the Distal Metaphysis with a Modified Total Knee Arthroplasty: A Case Report & Review of the Literature",j:"John Peter Smith Research & Quality Symposium",d:"Fort Worth, TX · Jun 2021"},
+      {y:2021,a:"Rechter GR, Brotherton S",t:"Treatment of End-Stage Osteoarthritis and Concurrent Bony Metastasis to the Distal Metaphysis with a Modified Total Knee Arthroplasty: A Case Report & Review of the Literature",j:"UNTHSC Research Day",d:"Fort Worth, TX · Mar 2021"},
+      {y:2021,a:"Rechter GR, Scofield H, Webb B",t:"Implementation of a Pre-Operative Huddle at a Level 1 Trauma Center",j:"UNTHSC Research Day",d:"Fort Worth, TX · Mar 2021 · Texas Cares Patient Safety Award"}
+    ]
+  };
 
-    // Injury tabs (WAI-ARIA tabs pattern, roving tabindex)
-    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab[role="tab"]'));
-    function selectTab(tab, focus) {
-      tabs.forEach(function (t) {
-        var selected = t === tab;
-        t.setAttribute('aria-selected', selected ? 'true' : 'false');
-        t.tabIndex = selected ? 0 : -1;
-        var panel = document.getElementById(t.getAttribute('aria-controls'));
-        if (panel) panel.hidden = !selected;
-      });
-      if (focus) tab.focus();
-      if (history.replaceState) history.replaceState(null, '', '#' + tab.getAttribute('aria-controls').replace('panel-', 'injury-'));
-    }
-    tabs.forEach(function (tab, i) {
-      tab.addEventListener('click', function () { selectTab(tab, false); });
-      tab.addEventListener('keydown', function (e) {
-        var next;
-        if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
-        else if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
-        else if (e.key === 'Home') next = tabs[0];
-        else if (e.key === 'End') next = tabs[tabs.length - 1];
-        if (next) { e.preventDefault(); selectTab(next, true); }
-      });
+  var TABS = [
+    {key:"peer",label:"Peer-reviewed"},
+    {key:"pending",label:"In press & submitted"},
+    {key:"chapters",label:"Book chapters"},
+    {key:"podium",label:"Podium presentations"},
+    {key:"poster",label:"Posters"}
+  ];
+
+  /* ---------------- Helpers ---------------- */
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function isFirst(item){return /^Rechter GR\b/.test(item.a);}
+  function authors(a){return esc(a).replace(/Rechter GR/g,'<b>Rechter GR</b>');}
+
+  /* ---------------- Stats (computed, so they stay true) ---------------- */
+  var statsEl=document.getElementById('stats');
+  var firstAuthorPeer=DATA.peer.filter(isFirst).length;
+  [
+    {n:DATA.peer.length,l:'peer-reviewed publications'},
+    {n:firstAuthorPeer,l:'as first author'},
+    {n:DATA.pending.length,l:'manuscripts in press or under review'},
+    {n:DATA.podium.length,l:'podium presentations'},
+    {n:DATA.poster.length,l:'poster presentations'}
+  ].forEach(function(s){
+    var d=document.createElement('div');d.className='stat';
+    d.innerHTML='<div class="n">'+s.n+'</div><div class="l">'+esc(s.l)+'</div>';
+    statsEl.appendChild(d);
+  });
+
+  /* ---------------- Tabs, filter, search ---------------- */
+  var tabsEl=document.getElementById('pub-tabs'), listEl=document.getElementById('pub-list');
+  var firstBtn=document.getElementById('first-author'), searchEl=document.getElementById('pub-search'), countEl=document.getElementById('result-count');
+  var state={tab:'peer',first:false,q:''};
+
+  TABS.forEach(function(t){
+    var b=document.createElement('button');
+    b.type='button';b.className='tab';b.role='tab';b.id='tab-'+t.key;
+    b.setAttribute('role','tab');b.setAttribute('aria-controls','pub-list');
+    b.innerHTML=esc(t.label)+'<span class="count">'+DATA[t.key].length+'</span>';
+    b.addEventListener('click',function(){state.tab=t.key;render();});
+    tabsEl.appendChild(b);
+  });
+  tabsEl.addEventListener('keydown',function(e){
+    var i=TABS.findIndex(function(t){return t.key===state.tab;}),n;
+    if(e.key==='ArrowRight')n=(i+1)%TABS.length;else if(e.key==='ArrowLeft')n=(i-1+TABS.length)%TABS.length;
+    else if(e.key==='Home')n=0;else if(e.key==='End')n=TABS.length-1;
+    if(n!==undefined){e.preventDefault();state.tab=TABS[n].key;render();document.getElementById('tab-'+state.tab).focus();}
+  });
+  firstBtn.addEventListener('click',function(){state.first=!state.first;render();});
+  searchEl.addEventListener('input',function(){state.q=searchEl.value.trim().toLowerCase();render();});
+
+  function render(){
+    TABS.forEach(function(t){
+      var b=document.getElementById('tab-'+t.key),sel=t.key===state.tab;
+      b.setAttribute('aria-selected',sel?'true':'false');b.tabIndex=sel?0:-1;
     });
-    // Deep link: #injury-shaft opens that tab
-    var m = /^#injury-([a-z]+)$/.exec(location.hash);
-    if (m) {
-      var target = document.getElementById('tab-' + m[1]);
-      if (target) { selectTab(target, false); document.getElementById('injuries').scrollIntoView(); }
-    }
+    firstBtn.setAttribute('aria-pressed',state.first?'true':'false');
+    var items=DATA[state.tab].filter(function(it){
+      if(state.first&&!isFirst(it))return false;
+      if(state.q){var hay=(it.t+' '+it.a+' '+it.j+' '+(it.d||'')+' '+(it.s||'')).toLowerCase();if(hay.indexOf(state.q)<0)return false;}
+      return true;
+    });
+    countEl.textContent=items.length+' of '+DATA[state.tab].length;
+    if(!items.length){listEl.innerHTML='<li class="empty">Nothing matches that search in this list.</li>';return;}
+    listEl.innerHTML=items.map(function(it){
+      var meta='';
+      if(it.s){var tone=it.s==='Accepted'?'badge-olive':'badge-amber';meta='<span class="badge '+tone+'">'+esc(it.s)+'</span>';}
+      else if(it.d){meta='<span class="muted">'+esc(it.d)+'</span>';}
+      var fa=isFirst(it)?'<span class="badge badge-accent">First author</span>':'';
+      return '<li class="pub"><span class="year">'+it.y+'</span><div>'+
+        '<div class="title">'+esc(it.t)+'</div>'+
+        '<div class="authors">'+authors(it.a)+'</div>'+
+        '<div class="venue"><i>'+esc(it.j)+'</i>'+(meta?' · '+meta:'')+fa+'</div>'+
+        '</div></li>';
+    }).join('');
+  }
+  render();
 
-    // Active nav link follows the section in view
-    var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]:not(.btn)'));
-    var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
-    if ('IntersectionObserver' in window && sections.length) {
-      var current = null;
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) current = en.target.id; });
-        links.forEach(function (a) { a.classList.toggle('is-active', a.getAttribute('href') === '#' + current); });
-      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-      sections.forEach(function (s) { io.observe(s); });
-    }
-  })();
+  /* ---------------- Page routing ---------------- */
+  var PAGES=['about','research','contact'];
+  var navLinks=Array.prototype.slice.call(document.querySelectorAll('.nav a[data-page]'));
+  function show(page,scroll){
+    if(PAGES.indexOf(page)<0)page='about';
+    PAGES.forEach(function(p){document.getElementById('page-'+p).hidden=(p!==page);});
+    navLinks.forEach(function(a){if(a.dataset.page===page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+    document.title=(page==='about'?'':({research:'Research',contact:'Contact'})[page]+' · ')+'The Ortho Trauma Doc';
+    if(scroll)window.scrollTo({top:0,behavior:'instant'});
+  }
+  function route(scroll){show((location.hash||'#about').slice(1),scroll);}
+  window.addEventListener('hashchange',function(){route(true);});
+  route(false);
+
+  document.getElementById('year').textContent=String(new Date().getFullYear());
+})();
 </script>
 </body>
 </html>
