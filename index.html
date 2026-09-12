@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Ortho Trauma Doc</title>
-<meta name="description" content="Griffin Rechter, MD — senior orthopaedic surgery resident preparing for a career in orthopaedic trauma. Publications, presentations, research and contact.">
+<title>Griffin Rechter, MD</title>
+<meta name="description" content="Griffin Rechter, MD — orthopaedic surgery resident headed into orthopaedic trauma. About, research and contact.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-  /* ---------- Tokens (Ortho Trauma Doc design system) ---------- */
+  /* ---------- Tokens ---------- */
   :root{
     --clay-50:#FBEFEA;--clay-100:#F4D9CE;--clay-400:#C46A4C;--clay-500:#A8452E;--clay-600:#8E3722;--clay-700:#702A19;
     --bone-50:#FDFBF7;--bone-100:#FBF7F1;--bone-200:#F4EDE3;--bone-300:#E9DFD1;--bone-400:#D9CBB8;--bone-500:#BFAE99;
@@ -200,13 +200,53 @@
   .site-footer .container{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline}
   .site-footer .wordmark{font-size:16px}
   .site-footer a{color:var(--text-body)}
+
+  /* ---------- Projects ---------- */
+  .projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  @media (max-width:960px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (max-width:600px){.projects{grid-template-columns:1fr}}
+  .project{display:flex;flex-direction:column;gap:8px;background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-lg);padding:22px 24px;box-shadow:var(--shadow-sm);text-decoration:none;color:var(--text-body);transition:box-shadow 220ms var(--ease),border-color 220ms var(--ease)}
+  .project:hover{box-shadow:var(--shadow-md);border-color:var(--border-default);color:var(--text-body)}
+  .project .eyebrow{margin:0;font-size:11.5px}
+  .project h3{font-size:18px;line-height:1.3}
+  .project p{font-size:14px;line-height:1.5;color:var(--text-muted);flex:1;margin:0}
+  .project p.eyebrow{flex:0 0 auto}
+  .project .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-family:var(--font-mono);font-size:12.5px;color:var(--text-faint);margin-top:6px}
+  .project .meta .go{margin-left:auto;color:var(--text-link);font-family:var(--font-sans);font-size:13.5px;font-weight:500;display:inline-flex;align-items:center;gap:5px}
+  .project .go svg{width:14px;height:14px;transition:transform 140ms var(--ease)}
+  .project:hover .go svg{transform:translateX(3px)}
+
+  .back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;text-decoration:none;margin-bottom:28px}
+  .back svg{width:15px;height:15px}
+  .detail-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:56px;align-items:start}
+  @media (max-width:860px){.detail-grid{grid-template-columns:1fr;gap:32px}}
+  .detail h2{font-size:clamp(28px,3.4vw,38px);letter-spacing:-0.015em;max-width:22ch}
+  .detail .prose{margin-top:20px}
+  .detail .prose p{font-size:17px;line-height:1.6}
+  .detail-meta{display:grid;gap:0}
+  .detail-meta div{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:11px 0;border-top:1px solid var(--border-hairline);font-size:14.5px;line-height:1.5}
+  .detail-meta div:last-child{border-bottom:1px solid var(--border-hairline)}
+  .detail-meta dt{color:var(--text-muted);margin:0}
+  .detail-meta dd{margin:0;color:var(--text-heading)}
+  .outputs h3{font-size:14px;font-family:var(--font-sans);font-weight:600;letter-spacing:0.02em;color:var(--text-muted);margin:36px 0 4px}
+  .outputs h3:first-child{margin-top:0}
+  .outputs .pubs{border-top:1px solid var(--border-hairline)}
+  .outputs .pub{padding:16px 0}
+  .outputs .pub .title{font-size:16px}
+  .related{margin-top:48px;padding-top:32px;border-top:1px solid var(--border-hairline)}
+  .related h3{font-size:14px;font-family:var(--font-sans);font-weight:600;color:var(--text-muted);margin-bottom:12px}
+  .related ul{display:flex;flex-wrap:wrap;gap:8px}
+  .related a{display:inline-block;font-size:14px;font-weight:500;text-decoration:none;padding:7px 12px;border-radius:var(--radius-pill);border:1px solid var(--border-default);background:var(--surface-card);color:var(--text-body)}
+  .related a:hover{background:var(--bone-200);color:var(--text-heading)}
+  .contact-plain{max-width:var(--prose)}
+  .contact-plain .contact-email{margin:20px 0 4px}
 </style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="container">
-    <a class="wordmark" href="#about" aria-label="The Ortho Trauma Doc — home"><span class="mark" aria-hidden="true"></span>The Ortho Trauma Doc</a>
+    <a class="wordmark" href="#about" aria-label="Griffin Rechter, MD — home"><span class="mark" aria-hidden="true"></span>Griffin Rechter, MD</a>
     <nav class="nav" aria-label="Site">
       <a href="#about" data-page="about">About</a>
       <a href="#research" data-page="research">Research</a>
@@ -223,8 +263,9 @@
     <div class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Griffin R. Rechter, MD</p>
-          <h1 id="about-title">A senior resident preparing for a career in orthopaedic trauma.</h1>
+          <p class="eyebrow">Orthopaedic surgery · Orlando Health</p>
+          <h1 id="about-title">Griffin Rechter, MD</h1>
+          <p class="lead">Fourth-year orthopaedic surgery resident, headed into orthopaedic trauma.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#research">See the research</a>
             <a class="btn btn-secondary" href="Griffin-Rechter-CV.pdf" download>Download CV</a>
@@ -238,7 +279,7 @@
       <div class="container split">
         <div class="sticky">
           <p class="eyebrow">About me</p>
-          <h2>Where I've been, and where I'm headed.</h2>
+          <h2>A little background.</h2>
         </div>
         <div class="prose">
           <p>I grew up in Houston. I graduated magna cum laude from San Diego State University and got my MD from Texas Christian University, graduating with honors.</p>
@@ -258,34 +299,33 @@
         <div>
           <ul class="timeline">
             <li><span class="when">2023 –</span><div><b>Orthopaedic surgery residency</b><span>Orlando Health Jewett Orthopaedic Institute · Orlando Regional Medical Center</span></div></li>
-            <li><span class="when">2023</span><div><b>Doctor of Medicine</b><span>Anne Burnett Marion School of Medicine at Texas Christian University · inaugural class · Honors recipient, top 15% of class</span></div></li>
-            <li><span class="when">2019</span><div><b>BA/BS, Biology, Chemistry and Psychology</b><span>San Diego State University · magna cum laude · Phi Beta Kappa</span></div></li>
+            <li><span class="when">2023</span><div><b>Doctor of Medicine</b><span>Anne Burnett Marion School of Medicine at Texas Christian University · inaugural class</span></div></li>
+            <li><span class="when">2019</span><div><b>BA/BS, Biology, Chemistry and Psychology</b><span>San Diego State University · magna cum laude</span></div></li>
           </ul>
 
           <div class="grid-2" style="margin-top:32px">
             <div class="card">
-              <h3>Leadership</h3>
+              <h3>Roles</h3>
               <ul>
-                <li>Resident member, Online Discussion Forum Committee, Orthopaedic Trauma Association<span class="when">Elected · 2026 – 2028</span></li>
+                <li>Resident member, Online Discussion Forum Committee, Orthopaedic Trauma Association<span class="when">2026 – 2028</span></li>
                 <li>Organizer, Orthopaedic Trauma Journal Club, Orlando Regional Medical Center<span class="when">2026 –</span></li>
                 <li>Member, Pelvic Fracture Hospital Consensus Committee, Orlando Regional Medical Center<span class="when">2025 –</span></li>
                 <li>Founder and president, Orthopaedic Surgery Interest Group, TCU School of Medicine<span class="when">2019 – 2023</span></li>
               </ul>
             </div>
             <div class="card">
-              <h3>Awards and honors</h3>
+              <h3>Awards</h3>
               <ul>
                 <li>Orlando Health Research Award<span class="when">2025 · 2026</span></li>
                 <li>First-place podium presentation, JPS Research &amp; Quality Symposium<span class="when">2021</span></li>
                 <li>Texas Cares Patient Safety Award<span class="when">2021</span></li>
-                <li>Honors in all clinical rotations · Honors recipient, TCU School of Medicine<span class="when">2019 – 2023</span></li>
-                <li>Magna cum laude · Phi Beta Kappa · Order of Omega · Golden Key · NSCS · Dean's List, San Diego State<span class="when">2015 – 2019</span></li>
+                <li>Phi Beta Kappa<span class="when">San Diego State University</span></li>
               </ul>
             </div>
             <div class="card">
               <h3>Grant funding</h3>
               <ul>
-                <li>Foundation of Orthopaedic Trauma grant — <i>Three-Dimensional Gait Analysis &amp; Functional Outcomes After Femoral Neck Fractures in a Young Population</i><span class="when">PIs: Michael Beltran, MD · Cory A. Collinge, MD</span></li>
+                <li>Foundation of Orthopaedic Trauma — <i>Three-Dimensional Gait Analysis &amp; Functional Outcomes After Femoral Neck Fractures in a Young Population</i><span class="when">PIs: Michael Beltran, MD · Cory A. Collinge, MD</span></li>
               </ul>
             </div>
             <div class="card">
@@ -303,52 +343,56 @@
 
   <!-- ================= RESEARCH ================= -->
   <section class="page" id="page-research" aria-labelledby="research-title" hidden>
-    <div class="section">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Research</p>
-          <h2 id="research-title">Publications, presentations and work in progress.</h2>
-          <p class="lead">Most of it is orthopaedic trauma — fractures around implants, femoral neck fractures in young adults, and how implants actually behave in bone. Some of it is sports knee surgery from a mentorship that started in medical school.</p>
+    <div id="research-index">
+      <div class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Research</p>
+            <h2 id="research-title">Projects, publications and presentations.</h2>
+            <p class="lead">Most of this is orthopaedic trauma — fractures around implants, femoral neck fractures in young adults, and how implants behave in bone. Some of it is knee surgery from a mentorship that started in medical school. Click a project to see what it asked and what came out of it.</p>
+          </div>
+          <div class="stats" id="stats" aria-label="Research output"></div>
+          <div class="projects" id="project-grid"></div>
         </div>
+      </div>
 
-        <div class="stats" id="stats" aria-label="Research output"></div>
-
-        <div class="themes">
-          <div class="theme">
-            <span class="mono">Theme 01</span>
-            <h3>Fractures around implants</h3>
-            <p>Periprosthetic and interprosthetic femur fractures: modular plating systems, nail–plate combinations for Vancouver C and interprosthetic patterns, extremely proximal periprosthetic fractures, and a systematic review of modern fixation strategies.</p>
+      <div class="section band-sunken">
+        <div class="container">
+          <div class="section-head" style="margin-bottom:24px">
+            <p class="eyebrow">All work</p>
+            <h2>Everything, by type.</h2>
           </div>
-          <div class="theme">
-            <span class="mono">Theme 02</span>
-            <h3>The young femoral neck fracture</h3>
-            <p>Multicenter work with the Young Femoral Neck Fracture Working Group on neck–shaft combinations, gait after repair, and whether acute total hip arthroplasty beats fixation for the displaced fracture in a young adult.</p>
+          <div class="tabs" role="tablist" aria-label="Type of work" id="pub-tabs"></div>
+          <div class="toolbar">
+            <div class="filters">
+              <button class="chip" id="first-author" aria-pressed="false" type="button">First author only</button>
+              <span class="small muted" id="result-count"></span>
+            </div>
+            <label class="search">
+              <span class="visually-hidden">Search titles, authors and journals</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input type="search" id="pub-search" placeholder="Search titles, authors, journals" autocomplete="off">
+            </label>
           </div>
-          <div class="theme">
-            <span class="mono">Theme 03</span>
-            <h3>Implants and biomechanics</h3>
-            <p>Lag-screw slide across cephalomedullary nail designs, interlocking-screw stability in retrograde nails, high-strength suture cerclage in femur and fibula fixation, and headless compression screws at the medial malleolus.</p>
-          </div>
+          <ol class="pubs" id="pub-list"></ol>
+          <p class="list-note">Author lists are as they appear on the published or submitted work. A full CV is available for <a href="Griffin-Rechter-CV.pdf" download>download</a>.</p>
         </div>
       </div>
     </div>
 
-    <div class="section band-sunken">
+    <div id="research-detail" class="section" hidden>
       <div class="container">
-        <div class="tabs" role="tablist" aria-label="Type of work" id="pub-tabs"></div>
-        <div class="toolbar">
-          <div class="filters">
-            <button class="chip" id="first-author" aria-pressed="false" type="button">First author only</button>
-            <span class="small muted" id="result-count"></span>
+        <a class="back" href="#research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All research</a>
+        <div class="detail-grid">
+          <div class="detail">
+            <p class="eyebrow" id="detail-theme"></p>
+            <h2 id="detail-title"></h2>
+            <div class="prose" id="detail-body"></div>
           </div>
-          <label class="search">
-            <span class="visually-hidden">Search titles, authors and journals</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-            <input type="search" id="pub-search" placeholder="Search titles, authors, journals" autocomplete="off">
-          </label>
+          <dl class="detail-meta" id="detail-meta"></dl>
         </div>
-        <ol class="pubs" id="pub-list"></ol>
-        <p class="list-note">Author lists are as they appear on the published or submitted work. A full CV with citations is available for <a href="Griffin-Rechter-CV.pdf" download>download</a>.</p>
+        <div class="outputs" id="detail-outputs" style="margin-top:48px"></div>
+        <div class="related" id="detail-related"></div>
       </div>
     </div>
   </section>
@@ -356,28 +400,12 @@
   <!-- ================= CONTACT ================= -->
   <section class="page" id="page-contact" aria-labelledby="contact-title" hidden>
     <div class="section">
-      <div class="container contact-grid">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Email is the fastest way to reach me.</h2>
-          <p class="lead" style="margin-top:14px">Whether you're a program director, a practice recruiting for trauma, a collaborator with a dataset, or a student thinking about orthopaedics — I read everything and reply to all of it.</p>
-          <a class="contact-email" href="mailto:griffinrechter@gmail.com">griffinrechter@gmail.com</a>
-          <p class="small muted">CV, publication list and references available on request.</p>
-          <div class="hero-actions" style="margin-top:22px">
-            <a class="btn btn-primary" href="mailto:griffinrechter@gmail.com?subject=Hello%20from%20orthotraumadoc.com">Send an email</a>
-            <a class="btn btn-secondary" href="Griffin-Rechter-CV.pdf" download>Download CV</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Good reasons to write</h3>
-          <ul class="ways">
-            <li><span class="k">Fellowship programs</span><span>Orthopaedic trauma fellowship, 2027 match cycle. Letters and case logs on request.</span></li>
-            <li><span class="k">Practices and hospitals</span><span>Trauma-focused positions beginning after fellowship. Open on geography.</span></li>
-            <li><span class="k">Research</span><span>Multicenter collaborations in periprosthetic fractures, young femoral neck fractures and implant outcomes.</span></li>
-            <li><span class="k">Students and residents</span><span>Questions about the match, research, or a career in orthopaedic trauma.</span></li>
-            <li><span class="k">Speaking</span><span>Journal club, grand rounds, and regional or national meetings.</span></li>
-          </ul>
-        </div>
+      <div class="container contact-plain">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Get in touch.</h2>
+        <p class="lead" style="margin-top:14px">The best way to reach me is by email.</p>
+        <a class="contact-email" href="mailto:griffinrechter@gmail.com">griffinrechter@gmail.com</a>
+        <p class="small muted">A copy of my CV is available <a href="Griffin-Rechter-CV.pdf" download>here</a>.</p>
       </div>
     </div>
   </section>
@@ -385,133 +413,245 @@
 
 <footer class="site-footer">
   <div class="container">
-    <a class="wordmark" href="#about"><span class="mark" aria-hidden="true"></span>The Ortho Trauma Doc</a>
+    <a class="wordmark" href="#about"><span class="mark" aria-hidden="true"></span>Griffin Rechter, MD</a>
     <span>© <span id="year">2026</span> Griffin R. Rechter, MD · Views are my own and not those of any hospital, residency program or university.</span>
   </div>
 </footer>
-
 <script>
 (function () {
   'use strict';
 
+  /* ---------------- Projects ---------------- */
+  var PROJECTS = [
+    {k:"young-fnf",theme:"Orthopaedic trauma",title:"Femoral neck fractures in young adults",years:"2022 –",role:"First author · multicenter collaborator",
+     one:"Multicenter work on how these fractures are fixed, how patients walk afterward, and whether acute hip replacement has a role.",
+     body:["A displaced femoral neck fracture in a young adult is one of the hardest problems in fracture care: fixation risks nonunion and avascular necrosis, and a hip replacement in a 35-year-old has its own costs. This line of work started in medical school with Cory Collinge and the Young Femoral Neck Fracture Working Group and has continued through residency.",
+           "The first study compared 80 femoral neck fractures that occurred alongside a femoral shaft fracture with isolated femoral neck fractures, across 26 North American trauma centers. Follow-on work looked at gait after uncomplicated repair at mid-term follow-up, funded in part by a Foundation of Orthopaedic Trauma grant for three-dimensional gait analysis, and at early-to-mid-term outcomes of acute total hip arthroplasty for displaced fractures in young and middle-aged patients."],
+     with:"Cory Collinge · Michael Beltran · George Haidukewych · Joshua Langford · Young Femoral Neck Fracture Working Group"},
+    {k:"periprosthetic",theme:"Orthopaedic trauma",title:"Fractures around hip and knee implants",years:"2024 –",role:"First author and co-author",
+     one:"Periprosthetic and interprosthetic femur fractures: plating systems, nail–plate combinations, and a systematic review of fixation strategies.",
+     body:["As more patients live with hip and knee replacements, more of them fracture the bone around those implants. These fractures are technically demanding and the evidence for how to fix them is thin. Working with George Haidukewych and Kareem Shaath at Orlando Health, this series looks at what actually happens after different fixation strategies.",
+           "It includes a multicenter report on a modular plating system for fractures around the hip, a comparison of retrograde nail plus lateral plate against lateral locked plating alone for Vancouver C fractures, a technique and case series for interprosthetic fractures, outcomes after fixation of extremely proximal periprosthetic fractures, and a systematic review of modern fixation strategies for interprosthetic femur fractures."],
+     with:"George Haidukewych · Kareem Shaath · Cory Collinge · Brandon Page · Davis Hedbany · Joshua Langford"},
+    {k:"nails",theme:"Orthopaedic trauma",title:"How femoral nails behave in bone",years:"2025 –",role:"First author and co-author",
+     one:"Lag-screw slide across cephalomedullary nail designs, and what the insert material does to interlocking-screw stability in retrograde nails.",
+     body:["Implant design decisions are usually made on the bench; these studies ask what the same implants do in patients. One series measured lag-screw slide in a new-generation cephalomedullary nail after geriatric intertrochanteric fractures, then compared sliding characteristics and failure rates across four nail designs.",
+           "A related study compared interlocking-screw stability in retrograde femoral nails with UHMWPE versus PEEK inserts."],
+     with:"Kareem Shaath · Brandon Page · Tyler Baker · George Haidukewych · Joshua Langford"},
+    {k:"cerclage",theme:"Orthopaedic trauma",title:"Suture cerclage augmentation",years:"2025 –",role:"First author",
+     one:"High-strength suture cerclage to hold a reduction during nailing — in the femur across several centers, and in the distal fibula.",
+     body:["Metal cable cerclage has a long history in fracture surgery and a long list of drawbacks. High-strength suture tape offers a way to hold a reduction during nailing without the metal. This work describes the technique for distal fibular intramedullary nailing and reports clinical and radiographic outcomes after suture cerclage augmentation of femoral fractures across multiple centers."],
+     with:"Kareem Shaath · Stephen Warner · Tyler Baker · Ricardo Encinas · George Haidukewych"},
+    {k:"medial-malleolus",theme:"Orthopaedic trauma",title:"Headless compression screws at the medial malleolus",years:"2025 –",role:"First author",
+     one:"A comparative cohort study asking whether headless screws reduce symptomatic hardware after medial malleolus fixation.",
+     body:["Prominent hardware over the medial malleolus is a common reason for a second operation after ankle fracture fixation. This comparative cohort study asks whether headless compression screws reduce symptomatic hardware compared with conventional screws, and what that means for reoperation."],
+     with:"Joshua Langford · Kareem Shaath · Brandon Page · Tyler Baker · George Haidukewych"},
+    {k:"talar-neck",theme:"Orthopaedic trauma",title:"Talar neck fractures and avascular necrosis",years:"2025 –",role:"Co-author",
+     one:"Does the fixation construct — screws alone or plate and screws — change the rate of avascular necrosis after displaced talar neck fractures?",
+     body:["Avascular necrosis of the talar body is the complication that defines this injury. This retrospective comparison of isolated screw fixation against plate-and-screw fixation in displaced talar neck fractures found lower rates of avascular necrosis with plate fixation."],
+     with:"Brandon Page · Kareem Shaath · Joshua Langford · George Haidukewych"},
+    {k:"atypical-femur",theme:"Orthopaedic trauma",title:"Atypical femur fractures",years:"2025 –",role:"First author",
+     one:"Closed reduction and intramedullary nailing of bisphosphonate-associated atypical femur fractures, and how reliably they heal.",
+     body:["Atypical femur fractures heal slowly and have a reputation for nonunion, which has pushed some surgeons toward open reduction and adjuncts. This series looked at closed reduction and intramedullary nailing alone and reported high rates of fracture union."],
+     with:"Brandon Page · Kareem Shaath · Joshua Langford · George Haidukewych"},
+    {k:"arthrotomy",theme:"Orthopaedic trauma",title:"Detecting traumatic arthrotomy with CT",years:"2024 –",role:"First author",
+     one:"Computed tomography versus the saline load test for finding an open joint injury, including a scoping review of the literature.",
+     body:["The saline load test is uncomfortable, operator-dependent and insensitive for small wounds. This work compares CT detection of traumatic arthrotomy against the saline load test at a Level I trauma center and reviews the published evidence for CT in this role."],
+     with:"Kareem Shaath · Davis Hedbany · George Haidukewych"},
+    {k:"trauma-outcomes",theme:"Orthopaedic trauma",title:"Fracture outcomes series at Orlando Health",years:"2025 –",role:"Co-author",
+     one:"Patella plating, timing of debridement in open tibia fractures, weight-bearing after posterior malleolus fixation, staged versus acute fixation of ankle fracture-dislocations, and the AP pelvis film in hip dislocation.",
+     body:["A set of retrospective outcome studies from the Orlando Health trauma service, each asking a practical question about how a common fracture is managed: a new anatomically contoured plating system for patella fractures, whether time to debridement changes infection rates in open tibial shaft fractures nailed acutely, whether unrestricted weight-bearing is safe after percutaneous fixation of posterior malleolar fractures with spiral distal-third tibia fractures, acute versus staged fixation of closed ankle fracture-dislocations, and how useful the AP pelvis radiograph is in diagnosing traumatic hip dislocation."],
+     with:"Kareem Shaath · Brandon Page · Joshua Langford · George Haidukewych"},
+    {k:"ota-trends",theme:"Orthopaedic trauma",title:"Thirty years of OTA research",years:"2026 –",role:"First author",
+     one:"A bibliometric look at what the Orthopaedic Trauma Association's annual meeting abstracts have studied over three decades.",
+     body:["What a specialty presents at its annual meeting is a record of what it cares about. This analysis codes thirty years of Orthopaedic Trauma Association annual meeting abstracts by anatomic region, study design and topic to describe how the field's research has shifted."],
+     with:"Kareem Shaath · Davis Hedbany · Joshua Langford · George Haidukewych"},
+    {k:"healing",theme:"Orthopaedic trauma",title:"Interfragmentary motion and fracture healing",years:"2022 – 2024",role:"First author",
+     one:"A scoping review of what early axial motion at the fracture site does to the healing environment.",
+     body:["Relative stability is the principle behind nails, bridge plates and dynamization, but the evidence for how much motion helps, and when, is scattered across basic science and clinical literature. This scoping review with Stephen Warner and James Kellam at UTHealth Houston maps that literature."],
+     with:"Stephen Warner · James Kellam"},
+    {k:"knee",theme:"Sports medicine",title:"Knee ligament and cartilage surgery",years:"2023 –",role:"First author and co-author",
+     one:"Technique articles and reviews on ACL, PCL and multiligament reconstruction, meniscal surgery, and cartilage lesions of the hip, from a mentorship with Bruce Levy.",
+     body:["A mentorship with Bruce Levy that began in medical school has produced a steady line of sports medicine work alongside the trauma research: how to set tibial translation in combined ACL–PCL reconstruction, how to avoid tunnel convergence in multiligament knee reconstruction, technique pearls for bone–patellar tendon–bone ACL reconstruction, distal MCL avulsion repair, arthroscopic posterior capsular release, a review of complications after meniscal repair and transplantation, and a book chapter on cartilage lesions of the hip.",
+           "Clinical outcome work in the series includes gracilis-sparing hamstring ACL reconstruction and minimum two-year outcomes after multiligamentous knee fracture-dislocation."],
+     with:"Bruce Levy · Aaron Krych · Mario Hevesi · Adam Tagliero · Kelechi Okoroha"},
+    {k:"kienbock",theme:"Hand surgery",title:"Kienböck's disease and radial inclination",years:"2023 – 2025",role:"Co-author",
+     one:"Whether the angle of the distal radius relates to how advanced Kienböck's disease is when it is first diagnosed.",
+     body:["Ulnar variance has long been linked to Kienböck's disease; radial inclination has received less attention. This study with Walter Pientka's group asked whether radial inclination is associated with the Lichtman stage at initial diagnosis."],
+     with:"Walter Pientka · Cyrus Wassef"},
+    {k:"match",theme:"Education",title:"What students value in the orthopaedic match",years:"2026 –",role:"First author",
+     one:"A survey of what medical students weigh when they rank orthopaedic surgery residency programs.",
+     body:["Programs spend real effort on recruitment without much data on what applicants actually weigh. This survey asks medical students applying to orthopaedic surgery what mattered when they built their rank lists."],
+     with:"Kareem Shaath · Tyler Baker · Joshua Langford · George Haidukewych"},
+    {k:"early",theme:"Medical school",title:"Early work",years:"2021 – 2023",role:"First author and co-author",
+     one:"A pre-operative huddle at a Level I trauma center, a modified knee arthroplasty case report, and a prophylactic free flap in ankle arthroplasty.",
+     body:["Projects from medical school at TCU and John Peter Smith Hospital in Fort Worth: implementing a pre-operative huddle at a Level I trauma center, which received the Texas Cares Patient Safety Award; a case report of a modified total knee arthroplasty for end-stage osteoarthritis with a concurrent bony metastasis; and a case of prophylactic gracilis free flap transfer in a high-risk ankle arthroplasty."],
+     with:"Brian Webb · Hayden Scofield · Shaun Brotherton · Maxim Pekarev"}
+  ];
+
   /* ---------------- Data (from CV, 2026) ---------------- */
   var DATA = {
     peer: [
-      {y:2026,a:"Rechter GR, Collinge CA, Shaath MK, Page BE, Langford JR, Haidukewych GJ",t:"Results of a Novel Modular Plating System for Periprosthetic Fractures Around the Hip: A Multi-Center Experience",j:"Journal of Arthroplasty",d:"2026"},
-      {y:2026,a:"Page BE, Shaath MK, Baker TJ, Rechter GR, Casin A, Yawman JP, Jacobs ED, Langford JR, Haidukewych GJ",t:"Effects of Insert Material on Interlocking Screw Stability in Retrograde Femoral Nailing: UHMWPE vs PEEK",j:"Journal of Orthopaedic Trauma",d:"2026;40(6):324-328"},
-      {y:2026,a:"Rechter GR, Page BE, Shaath MK, Nasir A, Baker TJ, Langford JR, Haidukewych GJ",t:"Closed Reduction and Intramedullary Nailing of Atypical Femur Fractures Results in High Rates of Fracture Union",j:"Injury",d:"2026;57(4):113144"},
-      {y:2026,a:"Daniel AV, Rechter GR, Barrera LE, Hevesi MA, Tagliero AJ, Okoroha KR, Krych AJ, Levy BA",t:"Arthroscopic Posterior Capsular Releases for Recalcitrant Arthrofibrosis",j:"Video Journal of Sports Medicine",d:"2026;6(4)"},
-      {y:2026,a:"Rechter GR, Khan AM, Tagliero AJ, Kannan AS, Levy BR, Krych AJ, Levy BA",t:"How to Set Anterior and Posterior Tibial Translation for Combined Anterior Cruciate Ligament and Posterior Cruciate Ligament Reconstruction",j:"Arthroscopy",d:"2026"},
-      {y:2026,a:"Page B, Rechter GR, Shaath MK, Langford J, Haidukewych GJ",t:"Decreased Rates of Avascular Necrosis in Displaced Talar Neck Fractures When Using Plate Fixation versus Screw Fixation Alone",j:"European Journal of Orthopaedic Trauma",d:"2026"},
-      {y:2026,a:"Page BE, Shaath MK, Rechter GR, Nasir BA, Baker TJ, Yawman JP, Jacobs ED, Langford JR, Haidukewych GJ",t:"A Dual Implant Approach to Vancouver C Femur Fractures: Improved Outcomes with Retrograde Nail and Lateral Plate Fixation Compared to Lateral Locked Plating",j:"Journal of Orthopaedic Trauma",d:"2026"},
-      {y:2026,a:"Bishop AK, Rechter GR, Levy BR, Hevesi MA, Krych AJ, Levy BA",t:"How to Avoid Tunnel Convergence of Anterior Cruciate Ligament and Lateral Collateral Ligament/Posterolateral Corner Sockets in Multiligamentous Knee Reconstructions",j:"Arthroscopy",d:"2026, in press"},
-      {y:2026,a:"Rechter GR, Reed LA, Khan AM, Deliso M, Hevesi M, Krych AJ, Levy BA",t:"Complications and Reoperations Following Meniscal Repair and Transplantation",j:"Current Reviews in Musculoskeletal Medicine",d:"2026;19(1):18"},
-      {y:2025,a:"Rechter GR, Tagliero AJ, Barrera LA, Hevesi MA, Okoroha KR, Krych AJ, Levy BA",t:"Anterior Cruciate Ligament Reconstruction with Bone Patellar Tendon Bone Autograft: Top 10 Pearls",j:"Arthroscopy Techniques",d:"2025;14:103796"},
-      {y:2025,a:"Daniel VA, Rechter GR, Reed LA, Williams WA, Carbone AD, Kannan AS",t:"Patellar Tendon Repair with Bioinductive Implant Augmentation",j:"Arthroscopy Techniques",d:"2025;14(7):103639"},
-      {y:2025,a:"Rechter GR, Barrera L, Daniel VA, Hevesi M, Krych AJ, Tagliero A, Levy BA",t:"Distal Medial Collateral Ligament Avulsion Repair",j:"Arthroscopy Techniques",d:"2025;14(6):103525"},
-      {y:2025,a:"Shaath MK, Page BE, Kosko B, Rechter GR, Nassir B, Jacobs E, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Interprosthetic Femoral Fractures: Surgical Technique and Case Series",j:"European Journal of Orthopaedic Surgery & Traumatology",d:"2025;35(1):253"},
-      {y:2025,a:"Shaath MK, Page B, Nasir BA, Rechter GR, Casin A, Yawman YP, Jacobs E, Langford JR, Haidukewych GJ",t:"Excellent Results with Low Reoperation Rates after Fixation of Patella Fractures with a New Anatomically Contoured Plating System",j:"Journal of Orthopaedic Trauma",d:"2025, online ahead of print"},
-      {y:2025,a:"Rechter GR, Levy BA, Krych AJ, Hevesi M",t:"Cartilage Lesions of the Hip",j:"Clinics in Sports Medicine",d:"2025;44(3):633-648"},
-      {y:2025,a:"Shaath MK, Ferreira R, Page B, Rechter GR, Nasir BA, Haidukewych GJ",t:"The Impact of Time to Surgical Debridement on Infection Rates in Open Tibial Shaft Fractures Treated with Immediate Medullary Nailing",j:"Journal of Orthopaedic Trauma",d:"2025, online ahead of print"},
-      {y:2025,a:"Shaath MK, Page B, Nassir BA, Rechter GR, Haidukewych GJ",t:"Increased Lag Screw Slide in a New Generation Cephalomedullary Nail after Treatment of Geriatric Intertrochanteric Femoral Fractures",j:"Journal of Orthopaedic Trauma",d:"2025;39(5):252-260"},
-      {y:2025,a:"Wassef C, Rechter GR, Tatapudi S, Sambhariya V, Pientka WJ",t:"The Effect of Radial Inclination on the Stage of Kienböck's Disease at Time of Initial Diagnosis",j:"HAND",d:"2025;(3):365-370"},
-      {y:2024,a:"Rechter GR, Anthony RT, Rennard J, Kellam JF, Warner SJ",t:"The Impact of Early Axial Interfragmentary Motion on the Fracture Healing Environment: A Scoping Review",j:"Injury",d:"2024;55(12):111917"},
-      {y:2024,a:"Rechter GR, Collinge CA, Rechter AJ, Gardner MJ, Sagi HC, Archdeacon MT, Mir HR, Rodriguez-Buitrago A, Mitchell P, Beltran MT, Young Femoral Neck Fracture Working Group",t:"Femoral Neck Fractures with Associated Ipsilateral Femoral Shaft Fractures in Young Adults <50 Years Old: A Multicenter Comparison of 80 Cases Versus Isolated Femoral Neck Fractures",j:"Journal of Orthopaedic Trauma",d:"2024;38(8):410-417"},
-      {y:2023,a:"Rechter GR, Mason E, Levy BA",t:"Gracilis-Sparing Anterior Cruciate Ligament Hamstring Graft Reconstruction Is Less Invasive Than Semitendinosus-Gracilis Graft Harvest and Shows No Clinical Difference in Outcomes With Grafts Greater Than 8 mm in Diameter",j:"Arthroscopy",d:"2023"},
-      {y:2023,a:"Fijany A, Rechter GR, Olsson S, Downey M, Pekarev M",t:"Prophylactic Gracilis Muscle Free Flap Transfer in a High-Risk Ankle Arthroplasty Patient",j:"Orthoplastic Surgery",d:"2023;12(1):15-19"},
-      {y:2022,a:"Scofield H, Teigen K, Blair S, Rechter GR, Webb B",t:"Implementation of a Pre-Operative Huddle at a Level 1 Trauma Center",j:"Journal of Patient Safety",d:"2022;18(4):e717-e752"},
-      {y:2021,a:"Rechter GR, Brotherton S",t:"Treatment of End-Stage Osteoarthritis and Concurrent Bony Metastasis to the Distal Metaphysis with a Modified Total Knee Arthroplasty: A Case Report & Review of the Literature",j:"Journal of Orthopaedic Surgery and Techniques",d:"2021;4(1):239-242"}
+      {p:"periprosthetic",y:2026,a:"Rechter GR, Collinge CA, Shaath MK, Page BE, Langford JR, Haidukewych GJ",t:"Results of a Novel Modular Plating System for Periprosthetic Fractures Around the Hip: A Multi-Center Experience",j:"Journal of Arthroplasty",d:"2026"},
+      {p:"nails",y:2026,a:"Page BE, Shaath MK, Baker TJ, Rechter GR, Casin A, Yawman JP, Jacobs ED, Langford JR, Haidukewych GJ",t:"Effects of Insert Material on Interlocking Screw Stability in Retrograde Femoral Nailing: UHMWPE vs PEEK",j:"Journal of Orthopaedic Trauma",d:"2026;40(6):324-328"},
+      {p:"atypical-femur",y:2026,a:"Rechter GR, Page BE, Shaath MK, Nasir A, Baker TJ, Langford JR, Haidukewych GJ",t:"Closed Reduction and Intramedullary Nailing of Atypical Femur Fractures Results in High Rates of Fracture Union",j:"Injury",d:"2026;57(4):113144"},
+      {p:"knee",y:2026,a:"Daniel AV, Rechter GR, Barrera LE, Hevesi MA, Tagliero AJ, Okoroha KR, Krych AJ, Levy BA",t:"Arthroscopic Posterior Capsular Releases for Recalcitrant Arthrofibrosis",j:"Video Journal of Sports Medicine",d:"2026;6(4)"},
+      {p:"knee",y:2026,a:"Rechter GR, Khan AM, Tagliero AJ, Kannan AS, Levy BR, Krych AJ, Levy BA",t:"How to Set Anterior and Posterior Tibial Translation for Combined Anterior Cruciate Ligament and Posterior Cruciate Ligament Reconstruction",j:"Arthroscopy",d:"2026"},
+      {p:"talar-neck",y:2026,a:"Page B, Rechter GR, Shaath MK, Langford J, Haidukewych GJ",t:"Decreased Rates of Avascular Necrosis in Displaced Talar Neck Fractures When Using Plate Fixation versus Screw Fixation Alone",j:"European Journal of Orthopaedic Trauma",d:"2026"},
+      {p:"periprosthetic",y:2026,a:"Page BE, Shaath MK, Rechter GR, Nasir BA, Baker TJ, Yawman JP, Jacobs ED, Langford JR, Haidukewych GJ",t:"A Dual Implant Approach to Vancouver C Femur Fractures: Improved Outcomes with Retrograde Nail and Lateral Plate Fixation Compared to Lateral Locked Plating",j:"Journal of Orthopaedic Trauma",d:"2026"},
+      {p:"knee",y:2026,a:"Bishop AK, Rechter GR, Levy BR, Hevesi MA, Krych AJ, Levy BA",t:"How to Avoid Tunnel Convergence of Anterior Cruciate Ligament and Lateral Collateral Ligament/Posterolateral Corner Sockets in Multiligamentous Knee Reconstructions",j:"Arthroscopy",d:"2026, in press"},
+      {p:"knee",y:2026,a:"Rechter GR, Reed LA, Khan AM, Deliso M, Hevesi M, Krych AJ, Levy BA",t:"Complications and Reoperations Following Meniscal Repair and Transplantation",j:"Current Reviews in Musculoskeletal Medicine",d:"2026;19(1):18"},
+      {p:"knee",y:2025,a:"Rechter GR, Tagliero AJ, Barrera LA, Hevesi MA, Okoroha KR, Krych AJ, Levy BA",t:"Anterior Cruciate Ligament Reconstruction with Bone Patellar Tendon Bone Autograft: Top 10 Pearls",j:"Arthroscopy Techniques",d:"2025;14:103796"},
+      {p:"knee",y:2025,a:"Daniel VA, Rechter GR, Reed LA, Williams WA, Carbone AD, Kannan AS",t:"Patellar Tendon Repair with Bioinductive Implant Augmentation",j:"Arthroscopy Techniques",d:"2025;14(7):103639"},
+      {p:"knee",y:2025,a:"Rechter GR, Barrera L, Daniel VA, Hevesi M, Krych AJ, Tagliero A, Levy BA",t:"Distal Medial Collateral Ligament Avulsion Repair",j:"Arthroscopy Techniques",d:"2025;14(6):103525"},
+      {p:"periprosthetic",y:2025,a:"Shaath MK, Page BE, Kosko B, Rechter GR, Nassir B, Jacobs E, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Interprosthetic Femoral Fractures: Surgical Technique and Case Series",j:"European Journal of Orthopaedic Surgery & Traumatology",d:"2025;35(1):253"},
+      {p:"trauma-outcomes",y:2025,a:"Shaath MK, Page B, Nasir BA, Rechter GR, Casin A, Yawman YP, Jacobs E, Langford JR, Haidukewych GJ",t:"Excellent Results with Low Reoperation Rates after Fixation of Patella Fractures with a New Anatomically Contoured Plating System",j:"Journal of Orthopaedic Trauma",d:"2025, online ahead of print"},
+      {p:"knee",y:2025,a:"Rechter GR, Levy BA, Krych AJ, Hevesi M",t:"Cartilage Lesions of the Hip",j:"Clinics in Sports Medicine",d:"2025;44(3):633-648"},
+      {p:"trauma-outcomes",y:2025,a:"Shaath MK, Ferreira R, Page B, Rechter GR, Nasir BA, Haidukewych GJ",t:"The Impact of Time to Surgical Debridement on Infection Rates in Open Tibial Shaft Fractures Treated with Immediate Medullary Nailing",j:"Journal of Orthopaedic Trauma",d:"2025, online ahead of print"},
+      {p:"nails",y:2025,a:"Shaath MK, Page B, Nassir BA, Rechter GR, Haidukewych GJ",t:"Increased Lag Screw Slide in a New Generation Cephalomedullary Nail after Treatment of Geriatric Intertrochanteric Femoral Fractures",j:"Journal of Orthopaedic Trauma",d:"2025;39(5):252-260"},
+      {p:"kienbock",y:2025,a:"Wassef C, Rechter GR, Tatapudi S, Sambhariya V, Pientka WJ",t:"The Effect of Radial Inclination on the Stage of Kienböck's Disease at Time of Initial Diagnosis",j:"HAND",d:"2025;(3):365-370"},
+      {p:"healing",y:2024,a:"Rechter GR, Anthony RT, Rennard J, Kellam JF, Warner SJ",t:"The Impact of Early Axial Interfragmentary Motion on the Fracture Healing Environment: A Scoping Review",j:"Injury",d:"2024;55(12):111917"},
+      {p:"young-fnf",y:2024,a:"Rechter GR, Collinge CA, Rechter AJ, Gardner MJ, Sagi HC, Archdeacon MT, Mir HR, Rodriguez-Buitrago A, Mitchell P, Beltran MT, Young Femoral Neck Fracture Working Group",t:"Femoral Neck Fractures with Associated Ipsilateral Femoral Shaft Fractures in Young Adults <50 Years Old: A Multicenter Comparison of 80 Cases Versus Isolated Femoral Neck Fractures",j:"Journal of Orthopaedic Trauma",d:"2024;38(8):410-417"},
+      {p:"knee",y:2023,a:"Rechter GR, Mason E, Levy BA",t:"Gracilis-Sparing Anterior Cruciate Ligament Hamstring Graft Reconstruction Is Less Invasive Than Semitendinosus-Gracilis Graft Harvest and Shows No Clinical Difference in Outcomes With Grafts Greater Than 8 mm in Diameter",j:"Arthroscopy",d:"2023"},
+      {p:"early",y:2023,a:"Fijany A, Rechter GR, Olsson S, Downey M, Pekarev M",t:"Prophylactic Gracilis Muscle Free Flap Transfer in a High-Risk Ankle Arthroplasty Patient",j:"Orthoplastic Surgery",d:"2023;12(1):15-19"},
+      {p:"early",y:2022,a:"Scofield H, Teigen K, Blair S, Rechter GR, Webb B",t:"Implementation of a Pre-Operative Huddle at a Level 1 Trauma Center",j:"Journal of Patient Safety",d:"2022;18(4):e717-e752"},
+      {p:"early",y:2021,a:"Rechter GR, Brotherton S",t:"Treatment of End-Stage Osteoarthritis and Concurrent Bony Metastasis to the Distal Metaphysis with a Modified Total Knee Arthroplasty: A Case Report & Review of the Literature",j:"Journal of Orthopaedic Surgery and Techniques",d:"2021;4(1):239-242"}
     ],
     pending: [
-      {y:2026,a:"Rechter GR, Hedbany DT, Shaath MK, Jacobs ED, Haidukewych GJ",t:"Operative Fixation of Interprosthetic Femur Fractures: A Systematic Review of Modern Fixation Strategies and Outcomes",j:"JAAOS",s:"Submitted"},
-      {y:2026,a:"Rechter GR, Langford JR, Page BE, Baker TB, Yawman J, Shaath MK, Haidukewych GJ",t:"Headless Compression Screws Reduce Symptomatic Hardware After Medial Malleolus Fixation: A Comparative Cohort Study",j:"Journal of Orthopaedic Trauma",s:"Under review"},
-      {y:2026,a:"Rechter GR, Collinge CA, Long JT, Beltran MJ, Patterson JT, Morshed S, Goto S, Garrison CJ, Archdeacon MT",t:"Minimal Gait Disturbance After Uncomplicated Repair of Femoral Neck Fractures in Young Adults at Mid-Term Follow-Up",j:"JAAOS Global Research & Reviews",s:"Submitted"},
-      {y:2026,a:"Rechter GR, Hedbany D, Shaath MK, Haidukewych GJ",t:"Computed Tomography Detection of a Traumatic Arthrotomy: A Scoping Review",j:"Advances in Orthopedics",s:"Submitted"},
-      {y:2026,a:"Rechter GR, Shaath MK, Hedbany DT, Casin A, Langford JR, Haidukewych GJ",t:"Trends in Orthopedic Trauma Research: A 30-Year Analysis of Orthopaedic Trauma Association Annual Meeting Abstracts",j:"Journal of Orthopaedic Trauma",s:"Submitted"},
-      {y:2026,a:"Encinas R, Rechter GR, Casin A, Yawman J, Haidukewych GJ, Shaath MK",t:"High Strength Suture-Based Cerclage Augmentation for Maintaining Reduction in Distal Fibular Intramedullary Nailing: A Novel Technique and Case Series",j:"OTA International",s:"Submitted"},
-      {y:2026,a:"Rechter GR, Yawman JP, Baker TJ, Galloway J, Jacobs EJ, Warner SJ, Shaath MK",t:"Clinical and Radiographic Outcomes Following High-Strength Suture Cerclage Augmentation of Femoral Fractures: A Multicenter Experience",j:"OTA International",s:"Submitted"},
-      {y:2026,a:"Miller AJ, Rechter GR, Haidukewych GJ",t:"Open Reduction & Internal Fixation of Extremely Proximal Periprosthetic Femur Fractures",j:"Bone & Joint Journal",s:"Submitted"},
-      {y:2026,a:"Rechter GR, Baker TJ, Landis G, Page B, Yawman J, Langford JR, Haidukewych GJ, Shaath MK",t:"Priorities in Match: What Medical Students Value When Ranking Orthopaedic Surgery Programs",j:"JAAOS",s:"Submitted"},
-      {y:2026,a:"Tagliero A, Rechter GR, Yanamala S, Page B, Williams J, Levy BA",t:"Clinical Outcomes of Multiligamentous Knee Fracture Dislocation at Minimum 2-Year Follow-Up",j:"Journal of Knee Surgery",s:"Accepted"}
+      {p:"periprosthetic",y:2026,a:"Rechter GR, Hedbany DT, Shaath MK, Jacobs ED, Haidukewych GJ",t:"Operative Fixation of Interprosthetic Femur Fractures: A Systematic Review of Modern Fixation Strategies and Outcomes",j:"JAAOS",s:"Submitted"},
+      {p:"medial-malleolus",y:2026,a:"Rechter GR, Langford JR, Page BE, Baker TB, Yawman J, Shaath MK, Haidukewych GJ",t:"Headless Compression Screws Reduce Symptomatic Hardware After Medial Malleolus Fixation: A Comparative Cohort Study",j:"Journal of Orthopaedic Trauma",s:"Under review"},
+      {p:"young-fnf",y:2026,a:"Rechter GR, Collinge CA, Long JT, Beltran MJ, Patterson JT, Morshed S, Goto S, Garrison CJ, Archdeacon MT",t:"Minimal Gait Disturbance After Uncomplicated Repair of Femoral Neck Fractures in Young Adults at Mid-Term Follow-Up",j:"JAAOS Global Research & Reviews",s:"Submitted"},
+      {p:"arthrotomy",y:2026,a:"Rechter GR, Hedbany D, Shaath MK, Haidukewych GJ",t:"Computed Tomography Detection of a Traumatic Arthrotomy: A Scoping Review",j:"Advances in Orthopedics",s:"Submitted"},
+      {p:"ota-trends",y:2026,a:"Rechter GR, Shaath MK, Hedbany DT, Casin A, Langford JR, Haidukewych GJ",t:"Trends in Orthopedic Trauma Research: A 30-Year Analysis of Orthopaedic Trauma Association Annual Meeting Abstracts",j:"Journal of Orthopaedic Trauma",s:"Submitted"},
+      {p:"cerclage",y:2026,a:"Encinas R, Rechter GR, Casin A, Yawman J, Haidukewych GJ, Shaath MK",t:"High Strength Suture-Based Cerclage Augmentation for Maintaining Reduction in Distal Fibular Intramedullary Nailing: A Novel Technique and Case Series",j:"OTA International",s:"Submitted"},
+      {p:"cerclage",y:2026,a:"Rechter GR, Yawman JP, Baker TJ, Galloway J, Jacobs EJ, Warner SJ, Shaath MK",t:"Clinical and Radiographic Outcomes Following High-Strength Suture Cerclage Augmentation of Femoral Fractures: A Multicenter Experience",j:"OTA International",s:"Submitted"},
+      {p:"periprosthetic",y:2026,a:"Miller AJ, Rechter GR, Haidukewych GJ",t:"Open Reduction & Internal Fixation of Extremely Proximal Periprosthetic Femur Fractures",j:"Bone & Joint Journal",s:"Submitted"},
+      {p:"match",y:2026,a:"Rechter GR, Baker TJ, Landis G, Page B, Yawman J, Langford JR, Haidukewych GJ, Shaath MK",t:"Priorities in Match: What Medical Students Value When Ranking Orthopaedic Surgery Programs",j:"JAAOS",s:"Submitted"},
+      {p:"knee",y:2026,a:"Tagliero A, Rechter GR, Yanamala S, Page B, Williams J, Levy BA",t:"Clinical Outcomes of Multiligamentous Knee Fracture Dislocation at Minimum 2-Year Follow-Up",j:"Journal of Knee Surgery",s:"Accepted"}
     ],
     chapters: [
-      {y:2025,a:"Rechter GR, Levy BA, Krych AJ, Hevesi MA",t:"Cartilage Lesions of the Hip",j:"In: Lee CA, ed. Cartilage. Clinics in Sports Medicine, vol 44. Elsevier",d:"2025; chap. 16, pp. 633-648"}
+      {p:"knee",y:2025,a:"Rechter GR, Levy BA, Krych AJ, Hevesi MA",t:"Cartilage Lesions of the Hip",j:"In: Lee CA, ed. Cartilage. Clinics in Sports Medicine, vol 44. Elsevier",d:"2025; chap. 16, pp. 633-648"}
     ],
     podium: [
-      {y:2026,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"ORIF versus Acute THA for Displaced Femoral Neck Fractures in Young Adults",j:"OREF Southeast Resident Research Symposium",d:"Orlando, FL · Aug 2026"},
-      {y:2026,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"Rethinking Fixation: Early-to-Mid Term Outcomes of Acute Total Hip Arthroplasty for Displaced Femoral Neck Fractures in Young Adults",j:"Rothman Orthopaedic Surgery Research Symposium",d:"Orlando, FL · Jun 2026"},
-      {y:2026,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"Rethinking Fixation: Early-to-Mid Term Outcomes of Acute Total Hip Arthroplasty for Displaced Femoral Neck Fractures in Young Adults",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
-      {y:2026,a:"Haidukewych GJ, Rechter GR, Miller A, Green C",t:"Nail-Plate Antibiotic Spacer for Complex Prosthetic Joint Infections",j:"International Hip Society Meeting",d:"Melbourne, Australia · 2026"},
-      {y:2026,a:"Haidukewych GJ, Rechter GR, Miller A, Green C",t:"Outcomes following ORIF of Extremely Proximal Periprosthetic Fractures",j:"International Hip Society Meeting",d:"Melbourne, Australia · 2026"},
-      {y:2026,a:"Haidukewych GJ, Rechter GR, Baker TJ, Green C, Shaath MK, Langford JR",t:"Results of Acute Total Hip Arthroplasty for Acute Displaced Femoral Neck Fractures in Middle-Aged Patients through the Direct Anterior Approach",j:"International Hip Society Meeting",d:"Melbourne, Australia · 2026"},
-      {y:2025,a:"Haidukewych GJ, Rechter GR, Green C, Jacobs ED, Shaath MK",t:"Results of a Novel Modular Plating System for Periprosthetic Fractures Around the Hip: A Multi-Center Experience",j:"International Hip Society Meeting",d:"2025"},
-      {y:2025,a:"Shaath MK, Shurafa ST, Yawman JP, Page B, Rechter GR, Langford JR, Haidukewych GJ",t:"The Utility of the AP Pelvis Radiograph in Diagnosing Traumatic Hip Dislocation",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
-      {y:2025,a:"Shaath MK, Page B, Rechter GR, Kosko B, Nasir BA, Jacobs ED, Langford JR, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Interprosthetic Femoral Fractures: Technical Note and Case Series",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
-      {y:2025,a:"Page B, Shaath MK, Nasir BA, Rechter GR, Langford JR, Haidukewych GJ",t:"Isolated Screw Versus Plate and Screw Fixation in Talar Neck Fractures: A Retrospective Comparative Analysis",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
-      {y:2025,a:"Weingart M, Shaath MK, Rechter GR, Page B, Langford J, Haidukewych GJ",t:"Avascular Necrosis Rate is Construct Dependent in Talar Neck Fractures",j:"Clinical Orthopaedic Society",d:"Amelia Island, FL · Sep 2025"},
-      {y:2025,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"The Case for Less: Closed Reduction & Intramedullary Nailing of Atypical Femur Fractures",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2025"},
-      {y:2024,a:"Rechter GR, Shaath MK",t:"The Detection of Traumatic Arthrotomies Utilizing Computed Tomography vs. Saline Load Test at a Level One Trauma Center",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2024"},
-      {y:2023,a:"Rechter GR, Collinge CA, Finlay A, Beltran MJ, Buitrago A, Mitchell P, Mir H, Gardner MJ, Archdeacon M, Tornetta P",t:"Comparative Outcomes of 80 Femoral Neck Fractures in Young Adult Patients with Ipsilateral Neck-Shaft Fractures Treated at 26 North American Trauma Centers",j:"Orthopaedic Trauma Association Annual Meeting",d:"Seattle, WA · Oct 2023"},
-      {y:2023,a:"Rechter GR, Anthony R, Rennard J, Kellam JF, Warner SJ",t:"Early Axial Interfragmentary Motion and its Impact on the Fracture Healing Environment: A Scoping Review",j:"AAOS Annual Meeting",d:"Las Vegas, NV · Mar 2023"},
-      {y:2021,a:"Rechter GR, Scofield H, Webb B",t:"Implementation of a Pre-Operative Huddle at a Level 1 Trauma Center",j:"John Peter Smith Research & Quality Symposium",d:"Fort Worth, TX · Jun 2021 · First-place podium award"}
+      {p:"young-fnf",y:2026,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"ORIF versus Acute THA for Displaced Femoral Neck Fractures in Young Adults",j:"OREF Southeast Resident Research Symposium",d:"Orlando, FL · Aug 2026"},
+      {p:"young-fnf",y:2026,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"Rethinking Fixation: Early-to-Mid Term Outcomes of Acute Total Hip Arthroplasty for Displaced Femoral Neck Fractures in Young Adults",j:"Rothman Orthopaedic Surgery Research Symposium",d:"Orlando, FL · Jun 2026"},
+      {p:"young-fnf",y:2026,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"Rethinking Fixation: Early-to-Mid Term Outcomes of Acute Total Hip Arthroplasty for Displaced Femoral Neck Fractures in Young Adults",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
+      {p:"periprosthetic",y:2026,a:"Haidukewych GJ, Rechter GR, Miller A, Green C",t:"Nail-Plate Antibiotic Spacer for Complex Prosthetic Joint Infections",j:"International Hip Society Meeting",d:"Melbourne, Australia · 2026"},
+      {p:"periprosthetic",y:2026,a:"Haidukewych GJ, Rechter GR, Miller A, Green C",t:"Outcomes following ORIF of Extremely Proximal Periprosthetic Fractures",j:"International Hip Society Meeting",d:"Melbourne, Australia · 2026"},
+      {p:"young-fnf",y:2026,a:"Haidukewych GJ, Rechter GR, Baker TJ, Green C, Shaath MK, Langford JR",t:"Results of Acute Total Hip Arthroplasty for Acute Displaced Femoral Neck Fractures in Middle-Aged Patients through the Direct Anterior Approach",j:"International Hip Society Meeting",d:"Melbourne, Australia · 2026"},
+      {p:"periprosthetic",y:2025,a:"Haidukewych GJ, Rechter GR, Green C, Jacobs ED, Shaath MK",t:"Results of a Novel Modular Plating System for Periprosthetic Fractures Around the Hip: A Multi-Center Experience",j:"International Hip Society Meeting",d:"2025"},
+      {p:"trauma-outcomes",y:2025,a:"Shaath MK, Shurafa ST, Yawman JP, Page B, Rechter GR, Langford JR, Haidukewych GJ",t:"The Utility of the AP Pelvis Radiograph in Diagnosing Traumatic Hip Dislocation",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
+      {p:"periprosthetic",y:2025,a:"Shaath MK, Page B, Rechter GR, Kosko B, Nasir BA, Jacobs ED, Langford JR, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Interprosthetic Femoral Fractures: Technical Note and Case Series",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
+      {p:"talar-neck",y:2025,a:"Page B, Shaath MK, Nasir BA, Rechter GR, Langford JR, Haidukewych GJ",t:"Isolated Screw Versus Plate and Screw Fixation in Talar Neck Fractures: A Retrospective Comparative Analysis",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
+      {p:"talar-neck",y:2025,a:"Weingart M, Shaath MK, Rechter GR, Page B, Langford J, Haidukewych GJ",t:"Avascular Necrosis Rate is Construct Dependent in Talar Neck Fractures",j:"Clinical Orthopaedic Society",d:"Amelia Island, FL · Sep 2025"},
+      {p:"atypical-femur",y:2025,a:"Rechter GR, Langford JR, Haidukewych GJ",t:"The Case for Less: Closed Reduction & Intramedullary Nailing of Atypical Femur Fractures",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2025"},
+      {p:"arthrotomy",y:2024,a:"Rechter GR, Shaath MK",t:"The Detection of Traumatic Arthrotomies Utilizing Computed Tomography vs. Saline Load Test at a Level One Trauma Center",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2024"},
+      {p:"young-fnf",y:2023,a:"Rechter GR, Collinge CA, Finlay A, Beltran MJ, Buitrago A, Mitchell P, Mir H, Gardner MJ, Archdeacon M, Tornetta P",t:"Comparative Outcomes of 80 Femoral Neck Fractures in Young Adult Patients with Ipsilateral Neck-Shaft Fractures Treated at 26 North American Trauma Centers",j:"Orthopaedic Trauma Association Annual Meeting",d:"Seattle, WA · Oct 2023"},
+      {p:"healing",y:2023,a:"Rechter GR, Anthony R, Rennard J, Kellam JF, Warner SJ",t:"Early Axial Interfragmentary Motion and its Impact on the Fracture Healing Environment: A Scoping Review",j:"AAOS Annual Meeting",d:"Las Vegas, NV · Mar 2023"},
+      {p:"early",y:2021,a:"Rechter GR, Scofield H, Webb B",t:"Implementation of a Pre-Operative Huddle at a Level 1 Trauma Center",j:"John Peter Smith Research & Quality Symposium",d:"Fort Worth, TX · Jun 2021 · First-place podium award"}
     ],
     poster: [
-      {y:2026,a:"Rechter GR, Encinas R, Page BE, Baker TJ, Jacobs ED, Yawman J, Shaath MK, Haidukewych GJ",t:"Cerclage Augmentation for Maintaining Reduction in Distal Fibula Fractures Treated with Intramedullary Nailing",j:"Orthopaedic Trauma Association Annual Meeting",d:"Nashville, TN · 2026"},
-      {y:2026,a:"Rechter GR, Page BE, Druskovich K, Young M, Baker TJ, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Orthopaedic Trauma Association Annual Meeting",d:"Nashville, TN · 2026"},
-      {y:2026,a:"Rechter GR, Baker TJ, Galloway J, Page B, Yawman J, Warner SJ, Shaath MK",t:"FiberTape Cerclage Augmentation in Femur Fracture Fixation: A Multicenter Experience",j:"Orthopaedic Trauma Association Annual Meeting",d:"Nashville, TN · 2026"},
-      {y:2026,a:"Baker TJ, Young M, Rechter GR, Page BE, Druskovich K, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Rothman Orthopaedic Surgery Research Symposium",d:"Orlando, FL · Jun 2026"},
-      {y:2026,a:"Young M, Baker TJ, Rechter GR, Page BE, Druskovich K, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
-      {y:2026,a:"Weingart M, Rechter GR, Encinas R, Shaath MK",t:"High-Strength Suture Cerclage Augmentation to Maintain Reduction in Distal Fibula Fractures Treated with Intramedullary Nailing: A Technique Note & Case Series",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
-      {y:2026,a:"Baker TJ, Rechter GR, Langford JR, Shaath MK",t:"Headless Compression Screws Reduce Symptomatic Hardware After Medial Malleolus Fixation: A Comparative Cohort Study",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
-      {y:2026,a:"Young M, Rechter GR, Page BE, Druskovich K, Baker TJ, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
-      {y:2026,a:"Page BE, Rechter GR, Baker TJ, Jacobs ED, Yawman J, Shaath MK, Haidukewych GJ",t:"A Dual Implant Approach to Vancouver C Periprosthetic Fractures: Improved Outcomes with Lateral Plate and Retrograde Intramedullary Nail",j:"SICOT World Congress",d:"Tokyo, Japan · 2026"},
-      {y:2026,a:"Rechter GR, Patterson J, Morshed S, Beltran MJ, Archdeacon M, Long J, Goto S, Collinge CA",t:"Minimal Gait Disturbance After Successful Repair of Femoral Neck Fractures in Young Adults with <1 cm Shortening at Mid-Term Follow-Up",j:"AAOS Annual Meeting",d:"New Orleans, LA · Mar 2026"},
-      {y:2026,a:"Page B, Shaath MK, Rechter GR, Nasir B, Langford JR, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Vancouver C Periprosthetic Femur Fractures Provides Reliable Healing Rates",j:"AAOS Annual Meeting",d:"New Orleans, LA · Mar 2026"},
-      {y:2025,a:"Rechter GR, Collinge CA, Green C, Jacobs ED, Shaath MK, Haidukewych GJ",t:"Results of a Novel Modular Plating System for Periprosthetic Fractures Around the Hip: A Multi-Center Experience",j:"Current Concepts in Joint Replacement (CCJR)",d:"Orlando, FL · Oct 2025"},
-      {y:2025,a:"Page B, Rechter GR, Shaath MK, Langford J, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Interprosthetic Femoral Fractures (technique video)",j:"Orthopaedic Trauma Association Annual Meeting",d:"Phoenix, AZ · Oct 2025"},
-      {y:2025,a:"Shaath MK, Rechter GR, Page B, Langford JR, Haidukewych GJ",t:"Decreased Rates of Avascular Necrosis in Displaced Talar Neck Fractures When Using Plate Fixation versus Screw Fixation Alone",j:"Orthopaedic Trauma Association Annual Meeting",d:"Phoenix, AZ · Oct 2025"},
-      {y:2025,a:"Shaath MK, Yawman JP, Page B, Rechter GR, Nasir BA, Langford JR, Haidukewych GJ",t:"Unrestricted Weight-Bearing After Percutaneous Fixation of Posterior Malleolar Fractures Associated with Spiral Distal-Third Tibial Shaft Fractures is Safe: A Comparative Cohort Study",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
-      {y:2025,a:"Shaath MK, Rechter GR, Yawman JP, Page B, Nasir BA, Young M, Jacobs ED, Langford JR, Haidukewych GJ",t:"Comparison of Complication Rates in Acute vs. Staged Fixation for Closed Ankle Fracture-Dislocations: A Retrospective Analysis",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
-      {y:2025,a:"Weingart M, Shaath MK, Rechter GR, Page B, Langford J, Haidukewych GJ",t:"Patellar Fracture Fixation with a New Anatomically Contoured Plating System",j:"Clinical Orthopaedic Society",d:"Amelia Island, FL · Sep 2025"},
-      {y:2025,a:"Williams AW, Kannan AS, Kupiszewski S, Daniel A, Rechter GR, Levy BA",t:"Mid- to Long-term Outcomes following Multiligamentous Knee Surgery: A Case Series",j:"Arthroscopy Association of North America",d:"Washington, DC · May 2025"},
-      {y:2023,a:"Rechter GR, Collinge CA, Finlay A, Beltran MJ, Buitrago A, Mitchell P, Mir H, Gardner MJ, Archdeacon M, Tornetta P",t:"Comparative Outcomes of 80 Femoral Neck Fractures in Young Adult Patients with Ipsilateral Neck-Shaft Fractures Treated at 26 North American Trauma Centers",j:"AAOS Annual Meeting",d:"Las Vegas, NV · Mar 2023"},
-      {y:2023,a:"Wassef C, Rechter GR, Tatapudi S, Sambhariya V, Pientka WJ",t:"The Effect of Radial Inclination on the Stage of Kienböck's Disease at Time of Initial Diagnosis",j:"American Society for Surgery of the Hand (ASSH)",d:"Toronto, ON · Sep 2023"},
-      {y:2023,a:"Rechter GR, Wassef C, Tatapudi S, Sambhariya V, Pientka WJ",t:"The Effect of Radial Inclination on the Stage of Kienböck's Disease at Time of Initial Diagnosis",j:"Orthopaedic Research Society Annual Meeting",d:"Dallas, TX · Feb 2023"},
-      {y:2022,a:"Fijany A, Rechter GR, Olsson S, Downey M, Pekarev M",t:"Prophylactic Gracilis Muscle Free Flap Transfer in a High-Risk Ankle Arthroplasty Patient",j:"21st Meeting of the International Society of Limb Salvage",d:"Los Angeles, CA · Sep 2022"},
-      {y:2022,a:"Rechter GR, Anthony R, Rennard J, Kellam J, Warner SJ",t:"Early Axial Interfragmentary Motion and its Impact on the Fracture Healing Environment: A Scoping Review",j:"UNTHSC Research Symposium",d:"Fort Worth, TX · Mar 2022"},
-      {y:2021,a:"Rechter GR, Brotherton S",t:"Treatment of End-Stage Osteoarthritis and Concurrent Bony Metastasis to the Distal Metaphysis with a Modified Total Knee Arthroplasty: A Case Report & Review of the Literature",j:"John Peter Smith Research & Quality Symposium",d:"Fort Worth, TX · Jun 2021"},
-      {y:2021,a:"Rechter GR, Brotherton S",t:"Treatment of End-Stage Osteoarthritis and Concurrent Bony Metastasis to the Distal Metaphysis with a Modified Total Knee Arthroplasty: A Case Report & Review of the Literature",j:"UNTHSC Research Day",d:"Fort Worth, TX · Mar 2021"},
-      {y:2021,a:"Rechter GR, Scofield H, Webb B",t:"Implementation of a Pre-Operative Huddle at a Level 1 Trauma Center",j:"UNTHSC Research Day",d:"Fort Worth, TX · Mar 2021 · Texas Cares Patient Safety Award"}
+      {p:"cerclage",y:2026,a:"Rechter GR, Encinas R, Page BE, Baker TJ, Jacobs ED, Yawman J, Shaath MK, Haidukewych GJ",t:"Cerclage Augmentation for Maintaining Reduction in Distal Fibula Fractures Treated with Intramedullary Nailing",j:"Orthopaedic Trauma Association Annual Meeting",d:"Nashville, TN · 2026"},
+      {p:"nails",y:2026,a:"Rechter GR, Page BE, Druskovich K, Young M, Baker TJ, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Orthopaedic Trauma Association Annual Meeting",d:"Nashville, TN · 2026"},
+      {p:"cerclage",y:2026,a:"Rechter GR, Baker TJ, Galloway J, Page B, Yawman J, Warner SJ, Shaath MK",t:"FiberTape Cerclage Augmentation in Femur Fracture Fixation: A Multicenter Experience",j:"Orthopaedic Trauma Association Annual Meeting",d:"Nashville, TN · 2026"},
+      {p:"nails",y:2026,a:"Baker TJ, Young M, Rechter GR, Page BE, Druskovich K, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Rothman Orthopaedic Surgery Research Symposium",d:"Orlando, FL · Jun 2026"},
+      {p:"nails",y:2026,a:"Young M, Baker TJ, Rechter GR, Page BE, Druskovich K, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
+      {p:"cerclage",y:2026,a:"Weingart M, Rechter GR, Encinas R, Shaath MK",t:"High-Strength Suture Cerclage Augmentation to Maintain Reduction in Distal Fibula Fractures Treated with Intramedullary Nailing: A Technique Note & Case Series",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
+      {p:"medial-malleolus",y:2026,a:"Baker TJ, Rechter GR, Langford JR, Shaath MK",t:"Headless Compression Screws Reduce Symptomatic Hardware After Medial Malleolus Fixation: A Comparative Cohort Study",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
+      {p:"nails",y:2026,a:"Young M, Rechter GR, Page BE, Druskovich K, Baker TJ, Nasir A, Yawman J, Jacobs ED, Shaath MK, Langford JR, Haidukewych GJ",t:"Does Implant Choice Matter? A Comparison of Sliding Characteristics and Failure Rates in Four Cephalomedullary Nail Designs",j:"Annual Central Florida Regional Orthopaedic Conference",d:"Orlando, FL · May 2026"},
+      {p:"periprosthetic",y:2026,a:"Page BE, Rechter GR, Baker TJ, Jacobs ED, Yawman J, Shaath MK, Haidukewych GJ",t:"A Dual Implant Approach to Vancouver C Periprosthetic Fractures: Improved Outcomes with Lateral Plate and Retrograde Intramedullary Nail",j:"SICOT World Congress",d:"Tokyo, Japan · 2026"},
+      {p:"young-fnf",y:2026,a:"Rechter GR, Patterson J, Morshed S, Beltran MJ, Archdeacon M, Long J, Goto S, Collinge CA",t:"Minimal Gait Disturbance After Successful Repair of Femoral Neck Fractures in Young Adults with <1 cm Shortening at Mid-Term Follow-Up",j:"AAOS Annual Meeting",d:"New Orleans, LA · Mar 2026"},
+      {p:"periprosthetic",y:2026,a:"Page B, Shaath MK, Rechter GR, Nasir B, Langford JR, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Vancouver C Periprosthetic Femur Fractures Provides Reliable Healing Rates",j:"AAOS Annual Meeting",d:"New Orleans, LA · Mar 2026"},
+      {p:"periprosthetic",y:2025,a:"Rechter GR, Collinge CA, Green C, Jacobs ED, Shaath MK, Haidukewych GJ",t:"Results of a Novel Modular Plating System for Periprosthetic Fractures Around the Hip: A Multi-Center Experience",j:"Current Concepts in Joint Replacement (CCJR)",d:"Orlando, FL · Oct 2025"},
+      {p:"periprosthetic",y:2025,a:"Page B, Rechter GR, Shaath MK, Langford J, Haidukewych GJ",t:"Retrograde Nail/Plate Combination for Interprosthetic Femoral Fractures (technique video)",j:"Orthopaedic Trauma Association Annual Meeting",d:"Phoenix, AZ · Oct 2025"},
+      {p:"talar-neck",y:2025,a:"Shaath MK, Rechter GR, Page B, Langford JR, Haidukewych GJ",t:"Decreased Rates of Avascular Necrosis in Displaced Talar Neck Fractures When Using Plate Fixation versus Screw Fixation Alone",j:"Orthopaedic Trauma Association Annual Meeting",d:"Phoenix, AZ · Oct 2025"},
+      {p:"trauma-outcomes",y:2025,a:"Shaath MK, Yawman JP, Page B, Rechter GR, Nasir BA, Langford JR, Haidukewych GJ",t:"Unrestricted Weight-Bearing After Percutaneous Fixation of Posterior Malleolar Fractures Associated with Spiral Distal-Third Tibial Shaft Fractures is Safe: A Comparative Cohort Study",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
+      {p:"trauma-outcomes",y:2025,a:"Shaath MK, Rechter GR, Yawman JP, Page B, Nasir BA, Young M, Jacobs ED, Langford JR, Haidukewych GJ",t:"Comparison of Complication Rates in Acute vs. Staged Fixation for Closed Ankle Fracture-Dislocations: A Retrospective Analysis",j:"SICOT World Congress",d:"Madrid, Spain · Sep 2025"},
+      {p:"trauma-outcomes",y:2025,a:"Weingart M, Shaath MK, Rechter GR, Page B, Langford J, Haidukewych GJ",t:"Patellar Fracture Fixation with a New Anatomically Contoured Plating System",j:"Clinical Orthopaedic Society",d:"Amelia Island, FL · Sep 2025"},
+      {p:"knee",y:2025,a:"Williams AW, Kannan AS, Kupiszewski S, Daniel A, Rechter GR, Levy BA",t:"Mid- to Long-term Outcomes following Multiligamentous Knee Surgery: A Case Series",j:"Arthroscopy Association of North America",d:"Washington, DC · May 2025"},
+      {p:"young-fnf",y:2023,a:"Rechter GR, Collinge CA, Finlay A, Beltran MJ, Buitrago A, Mitchell P, Mir H, Gardner MJ, Archdeacon M, Tornetta P",t:"Comparative Outcomes of 80 Femoral Neck Fractures in Young Adult Patients with Ipsilateral Neck-Shaft Fractures Treated at 26 North American Trauma Centers",j:"AAOS Annual Meeting",d:"Las Vegas, NV · Mar 2023"},
+      {p:"kienbock",y:2023,a:"Wassef C, Rechter GR, Tatapudi S, Sambhariya V, Pientka WJ",t:"The Effect of Radial Inclination on the Stage of Kienböck's Disease at Time of Initial Diagnosis",j:"American Society for Surgery of the Hand (ASSH)",d:"Toronto, ON · Sep 2023"},
+      {p:"kienbock",y:2023,a:"Rechter GR, Wassef C, Tatapudi S, Sambhariya V, Pientka WJ",t:"The Effect of Radial Inclination on the Stage of Kienböck's Disease at Time of Initial Diagnosis",j:"Orthopaedic Research Society Annual Meeting",d:"Dallas, TX · Feb 2023"},
+      {p:"early",y:2022,a:"Fijany A, Rechter GR, Olsson S, Downey M, Pekarev M",t:"Prophylactic Gracilis Muscle Free Flap Transfer in a High-Risk Ankle Arthroplasty Patient",j:"21st Meeting of the International Society of Limb Salvage",d:"Los Angeles, CA · Sep 2022"},
+      {p:"healing",y:2022,a:"Rechter GR, Anthony R, Rennard J, Kellam J, Warner SJ",t:"Early Axial Interfragmentary Motion and its Impact on the Fracture Healing Environment: A Scoping Review",j:"UNTHSC Research Symposium",d:"Fort Worth, TX · Mar 2022"},
+      {p:"early",y:2021,a:"Rechter GR, Brotherton S",t:"Treatment of End-Stage Osteoarthritis and Concurrent Bony Metastasis to the Distal Metaphysis with a Modified Total Knee Arthroplasty: A Case Report & Review of the Literature",j:"John Peter Smith Research & Quality Symposium",d:"Fort Worth, TX · Jun 2021"},
+      {p:"early",y:2021,a:"Rechter GR, Brotherton S",t:"Treatment of End-Stage Osteoarthritis and Concurrent Bony Metastasis to the Distal Metaphysis with a Modified Total Knee Arthroplasty: A Case Report & Review of the Literature",j:"UNTHSC Research Day",d:"Fort Worth, TX · Mar 2021"},
+      {p:"early",y:2021,a:"Rechter GR, Scofield H, Webb B",t:"Implementation of a Pre-Operative Huddle at a Level 1 Trauma Center",j:"UNTHSC Research Day",d:"Fort Worth, TX · Mar 2021 · Texas Cares Patient Safety Award"}
     ]
   };
 
   var TABS = [
-    {key:"peer",label:"Peer-reviewed"},
-    {key:"pending",label:"In press & submitted"},
-    {key:"chapters",label:"Book chapters"},
-    {key:"podium",label:"Podium presentations"},
-    {key:"poster",label:"Posters"}
+    {key:"peer",label:"Peer-reviewed",single:"Peer-reviewed publications"},
+    {key:"pending",label:"In press & submitted",single:"In press and submitted"},
+    {key:"chapters",label:"Book chapters",single:"Book chapters"},
+    {key:"podium",label:"Podium presentations",single:"Podium presentations"},
+    {key:"poster",label:"Posters",single:"Poster presentations"}
   ];
 
   /* ---------------- Helpers ---------------- */
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function isFirst(item){return /^Rechter GR\b/.test(item.a);}
   function authors(a){return esc(a).replace(/Rechter GR/g,'<b>Rechter GR</b>');}
+  function pubHTML(it){
+    var meta='';
+    if(it.s){var tone=it.s==='Accepted'?'badge-olive':'badge-amber';meta='<span class="badge '+tone+'">'+esc(it.s)+'</span>';}
+    else if(it.d){meta='<span class="muted">'+esc(it.d)+'</span>';}
+    var fa=isFirst(it)?'<span class="badge badge-accent">First author</span>':'';
+    return '<li class="pub"><span class="year">'+it.y+'</span><div>'+
+      '<div class="title">'+esc(it.t)+'</div>'+
+      '<div class="authors">'+authors(it.a)+'</div>'+
+      '<div class="venue"><i>'+esc(it.j)+'</i>'+(meta?' · '+meta:'')+fa+'</div>'+
+      '</div></li>';
+  }
+  function outputsFor(k){var out={};TABS.forEach(function(t){out[t.key]=DATA[t.key].filter(function(it){return it.p===k;});});return out;}
+  function countFor(k){var n=0;TABS.forEach(function(t){n+=DATA[t.key].filter(function(it){return it.p===k;}).length;});return n;}
 
   /* ---------------- Stats (computed, so they stay true) ---------------- */
   var statsEl=document.getElementById('stats');
-  var firstAuthorPeer=DATA.peer.filter(isFirst).length;
   [
+    {n:PROJECTS.length,l:'research projects'},
     {n:DATA.peer.length,l:'peer-reviewed publications'},
-    {n:firstAuthorPeer,l:'as first author'},
+    {n:DATA.peer.filter(isFirst).length,l:'as first author'},
     {n:DATA.pending.length,l:'manuscripts in press or under review'},
-    {n:DATA.podium.length,l:'podium presentations'},
-    {n:DATA.poster.length,l:'poster presentations'}
+    {n:DATA.podium.length+DATA.poster.length,l:'podium and poster presentations'}
   ].forEach(function(s){
     var d=document.createElement('div');d.className='stat';
     d.innerHTML='<div class="n">'+s.n+'</div><div class="l">'+esc(s.l)+'</div>';
     statsEl.appendChild(d);
   });
+
+  /* ---------------- Project grid ---------------- */
+  var arrow='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  document.getElementById('project-grid').innerHTML=PROJECTS.map(function(p){
+    var n=countFor(p.k);
+    return '<a class="project" href="#research/'+p.k+'">'+
+      '<p class="eyebrow">'+esc(p.theme)+'</p>'+
+      '<h3>'+esc(p.title)+'</h3>'+
+      '<p>'+esc(p.one)+'</p>'+
+      '<div class="meta"><span>'+esc(p.years)+'</span><span>'+n+(n===1?' output':' outputs')+'</span><span class="go">Open '+arrow+'</span></div>'+
+      '</a>';
+  }).join('');
+
+  /* ---------------- Project detail ---------------- */
+  function renderDetail(k){
+    var p=PROJECTS.filter(function(x){return x.k===k;})[0];
+    if(!p)return false;
+    document.getElementById('detail-theme').textContent=p.theme;
+    document.getElementById('detail-title').textContent=p.title;
+    document.getElementById('detail-body').innerHTML=p.body.map(function(t){return '<p>'+esc(t)+'</p>';}).join('');
+    var out=outputsFor(k),n=countFor(k);
+    document.getElementById('detail-meta').innerHTML=
+      '<div><dt>Years</dt><dd>'+esc(p.years)+'</dd></div>'+
+      '<div><dt>My role</dt><dd>'+esc(p.role)+'</dd></div>'+
+      '<div><dt>Working with</dt><dd>'+esc(p.with)+'</dd></div>'+
+      '<div><dt>Output</dt><dd>'+n+(n===1?' item':' items')+' — '+TABS.filter(function(t){return out[t.key].length;}).map(function(t){return out[t.key].length+' '+t.label.toLowerCase();}).join(', ')+'</dd></div>';
+    document.getElementById('detail-outputs').innerHTML=TABS.filter(function(t){return out[t.key].length;}).map(function(t){
+      return '<h3>'+esc(t.single)+'</h3><ol class="pubs">'+out[t.key].map(pubHTML).join('')+'</ol>';
+    }).join('');
+    var others=PROJECTS.filter(function(x){return x.k!==k&&x.theme===p.theme;});
+    document.getElementById('detail-related').innerHTML=others.length?'<h3>Other '+esc(p.theme.toLowerCase())+' projects</h3><ul>'+others.map(function(x){return '<li><a href="#research/'+x.k+'">'+esc(x.title)+'</a></li>';}).join('')+'</ul>':'';
+    return true;
+  }
 
   /* ---------------- Tabs, filter, search ---------------- */
   var tabsEl=document.getElementById('pub-tabs'), listEl=document.getElementById('pub-list');
@@ -520,7 +660,7 @@
 
   TABS.forEach(function(t){
     var b=document.createElement('button');
-    b.type='button';b.className='tab';b.role='tab';b.id='tab-'+t.key;
+    b.type='button';b.className='tab';b.id='tab-'+t.key;
     b.setAttribute('role','tab');b.setAttribute('aria-controls','pub-list');
     b.innerHTML=esc(t.label)+'<span class="count">'+DATA[t.key].length+'</span>';
     b.addEventListener('click',function(){state.tab=t.key;render();});
@@ -547,32 +687,29 @@
       return true;
     });
     countEl.textContent=items.length+' of '+DATA[state.tab].length;
-    if(!items.length){listEl.innerHTML='<li class="empty">Nothing matches that search in this list.</li>';return;}
-    listEl.innerHTML=items.map(function(it){
-      var meta='';
-      if(it.s){var tone=it.s==='Accepted'?'badge-olive':'badge-amber';meta='<span class="badge '+tone+'">'+esc(it.s)+'</span>';}
-      else if(it.d){meta='<span class="muted">'+esc(it.d)+'</span>';}
-      var fa=isFirst(it)?'<span class="badge badge-accent">First author</span>':'';
-      return '<li class="pub"><span class="year">'+it.y+'</span><div>'+
-        '<div class="title">'+esc(it.t)+'</div>'+
-        '<div class="authors">'+authors(it.a)+'</div>'+
-        '<div class="venue"><i>'+esc(it.j)+'</i>'+(meta?' · '+meta:'')+fa+'</div>'+
-        '</div></li>';
-    }).join('');
+    listEl.innerHTML=items.length?items.map(pubHTML).join(''):'<li class="empty">Nothing matches that search in this list.</li>';
   }
   render();
 
-  /* ---------------- Page routing ---------------- */
+  /* ---------------- Routing ---------------- */
   var PAGES=['about','research','contact'];
   var navLinks=Array.prototype.slice.call(document.querySelectorAll('.nav a[data-page]'));
-  function show(page,scroll){
+  var idx=document.getElementById('research-index'),det=document.getElementById('research-detail');
+  function show(hash,scroll){
+    var parts=(hash||'about').split('/'),page=parts[0],sub=parts[1];
     if(PAGES.indexOf(page)<0)page='about';
+    var title='Griffin Rechter, MD';
+    if(page==='research'){
+      var ok=sub&&renderDetail(sub);
+      idx.hidden=!!ok;det.hidden=!ok;
+      title=(ok?document.getElementById('detail-title').textContent:'Research')+' · '+title;
+    } else if(page==='contact'){title='Contact · '+title;}
     PAGES.forEach(function(p){document.getElementById('page-'+p).hidden=(p!==page);});
     navLinks.forEach(function(a){if(a.dataset.page===page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
-    document.title=(page==='about'?'':({research:'Research',contact:'Contact'})[page]+' · ')+'The Ortho Trauma Doc';
+    document.title=title;
     if(scroll)window.scrollTo({top:0,behavior:'instant'});
   }
-  function route(scroll){show((location.hash||'#about').slice(1),scroll);}
+  function route(scroll){show(location.hash.slice(1),scroll);}
   window.addEventListener('hashchange',function(){route(true);});
   route(false);
 
