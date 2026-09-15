@@ -250,6 +250,16 @@
   .pubs-abstracts .pub{padding:28px 0}
   .pubs-abstracts .pub .title{font-size:18px}
   .pub.is-target{background:linear-gradient(90deg,var(--amber-100),transparent 60%);margin-inline:-16px;padding-inline:16px;border-radius:var(--radius-md)}
+
+  .stats{grid-template-columns:repeat(6,minmax(0,1fr))}
+  @media (max-width:1100px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @media (max-width:560px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .conferences{margin:-8px 0 48px;padding:24px 28px;background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 40px;align-items:center}
+  @media (max-width:860px){.conferences{grid-template-columns:1fr}}
+  .conferences .eyebrow{grid-column:1 / -1;margin-bottom:0}
+  .conferences p:not(.eyebrow){margin:0;max-width:62ch;font-size:15.5px;line-height:1.6}
+  .conf-list{display:flex;flex-wrap:wrap;gap:8px}
+  .conf-list li{font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:0.04em;padding:7px 12px;border-radius:var(--radius-pill);background:var(--clay-50);color:var(--clay-700);border:1px solid var(--clay-100)}
 </style>
 </head>
 <body>
@@ -360,6 +370,13 @@
             <p class="eyebrow">Research</p>
             <h2 id="research-title">Projects, publications and presentations.</h2>
             <p class="lead">I have published across several areas of orthopaedics, from basic science and general orthopaedics to fracture care, with a particular interest in fracture healing, femoral neck fractures in young adults, and the care of the orthopaedic trauma patient. Each project below links to the published abstracts and presentations that came from it.</p>
+          </div>
+          <div class="conferences">
+            <p class="eyebrow">National presentations</p>
+            <p>This work has been presented at multiple national and international meetings, including the American Academy of Orthopaedic Surgeons (AAOS), the American Association for Hand Surgery (AAHS), the American Association of Hip and Knee Surgeons (AAHKS), the Orthopaedic Trauma Association (OTA) and the Orthopaedic Research Society (ORS).</p>
+            <ul class="conf-list" aria-label="Societies">
+              <li>AAOS</li><li>AAHS</li><li>AAHKS</li><li>OTA</li><li>ORS</li>
+            </ul>
           </div>
           <div class="stats" id="stats" aria-label="Research output"></div>
           <div class="projects" id="project-grid"></div>
@@ -560,14 +577,15 @@
   function outputsFor(k){var out={};TABS.forEach(function(t){out[t.key]=DATA[t.key].filter(function(it){return it.p===k;});});return out;}
   function countFor(k){var n=0;TABS.forEach(function(t){n+=DATA[t.key].filter(function(it){return it.p===k;}).length;});return n;}
 
-  /* ---------------- Stats ---------------- */
+  /* ---------------- Stats (hand-set by Griffin; confirm before changing) ---------------- */
   var statsEl=document.getElementById('stats');
   [
-    {n:PROJECTS.length,l:'research projects'},
-    {n:DATA.peer.length,l:'peer-reviewed publications'},
-    {n:DATA.peer.filter(isFirst).length,l:'as first author'},
-    {n:DATA.podium.length,l:'podium presentations'},
-    {n:DATA.poster.length,l:'poster presentations'}
+    {n:'30+',l:'research projects'},
+    {n:'24',l:'peer-reviewed publications'},
+    {n:'15',l:'manuscripts in submission'},
+    {n:'20',l:'first-author projects'},
+    {n:'16',l:'podium presentations'},
+    {n:'26',l:'poster presentations'}
   ].forEach(function(s){
     var d=document.createElement('div');d.className='stat';
     d.innerHTML='<div class="n">'+s.n+'</div><div class="l">'+esc(s.l)+'</div>';
